@@ -162,7 +162,7 @@ li {
   width: 50px;
   height: 50px;
 }
-@media  (max-width: 360px;) {
+@media  (max-width: 360px) {
   header {
     background: black;
   }
