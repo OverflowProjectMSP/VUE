@@ -20,6 +20,10 @@ export default {
 </template>
 <!-- npm run dev прописывай в папке testing -->
 <style scoped>
+@import url('https://fonts.cdnfonts.com/css/rubik');
+body {
+  font-family: Rubik;
+}
 .t-alig-c{
     text-align: center;
 }
