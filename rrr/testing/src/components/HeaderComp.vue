@@ -166,7 +166,7 @@ li {
   width: 50px;
   height: 50px;
 }
-@media  (max-width: 539px) {
+@media  (max-width: 1000px) {
   
     .navbar-nav {
       gap: 0px;
