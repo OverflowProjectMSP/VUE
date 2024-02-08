@@ -10,7 +10,7 @@
               <div class="container-fluid ">
                 <a class="navbar-brand" href="#"><div class="logo-container mt-1"><img src="..//assets/apple-touch-icon@2.png" alt="" class="logo"></div></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"><img src="" alt="" srcset=""></span>
+                  <span class="navbar-toggler-icon"><img src="" alt="" srcset=""><img src="../assets/icons8-меню-50.png" alt="" class="icon-btn"></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -41,7 +41,7 @@
         
                     </div>
                     <form class="d-flex form" role="search">
-                      <input class="form-control me-2 inp" type="search" placeholder="Найти статью" aria-label="Search">
+                      <input class="form-control  inp " type="search" placeholder="Найти статью" aria-label="Search">
                   
                     </form>
                     <div class="them-container">
@@ -55,9 +55,12 @@
                 
               </nav>
             </header>
-
+         
 </template>
 <style scoped>
+.icon-btn {
+margin-top: -20px;
+}
 header{
     background-color: #3B82F6;
     width: auto;
@@ -85,6 +88,7 @@ header{
     height: 35px;
     margin-right: 10px;
     margin-left: 3px;
+    cursor: pointer;
     
 }
 .button-search {
@@ -145,7 +149,7 @@ li {
     display: flex;
 }
 .inp {
-   width: px;
+   width: 440px;
    border-radius: 9px;
 }
 
@@ -162,9 +166,22 @@ li {
   width: 50px;
   height: 50px;
 }
-@media  (max-width: 360px) {
-  header {
-    background: black;
-  }
+@media  (max-width: 539px) {
+  
+    .navbar-nav {
+      gap: 0px;
+      margin-left: 14px;
+    }
+    .ava {
+    margin-top: -60px;
+}
+.them {
+  margin-left: 19%;
+  margin-top: 5%;
+}
+
+.form input {
+  width: 210px;
+}
 }
 </style>
