@@ -6,7 +6,7 @@ import VidComp from "./components/VidComp.vue";
 export default {
   components: {
     HeaderComp,
-    VidComp
+    VidComp,
    }
 }
 </script>
