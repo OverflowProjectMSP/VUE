@@ -40,6 +40,12 @@ for (let i = 0; i < elList.length; i++) {
 </template>
 
 <style>
+:root{
+    --size-20: 20px;
+    --size-26: 26px;
+    --size-22: 22px;
+    --size-18: 18px;
+}
 .t-alig-c{
     text-align: center;
 }
@@ -50,7 +56,7 @@ for (let i = 0; i < elList.length; i++) {
     display: flex;
     justify-content: space-between;
     border-radius: 15px;
-    margin-bottom: 15px;
+    margin:0 20% 15px 20%;
 }
 
 /* общее расположение элементов */
@@ -134,5 +140,66 @@ div.vid {
 div.vid:hover {
     transform: translateY(-10px);
     box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.5);
+}
+
+/* Адаптивка */
+@media(max-width: 1200px){
+    .q{
+        font-size: var(--size-20);
+    }
+}
+@media(max-width: 992px){
+    .q{
+        font-size: var(--size-18);
+    }
+    .quest{
+        margin: 0 15%;
+    }
+    .mid-1 p{
+        font-size: 24px;
+    }
+    
+}
+
+@media(max-width: 576px){
+    .q{
+        font-size: var(--size-18);
+    }
+    .quest{
+        margin: 0 15%;
+    }
+    .mid-1 p{
+        font-size: var(--size-20);
+    }
+    .bottom-1{
+        font-size: 13px;
+    }
+    .right p{
+        font-size: var(--size-18);
+    }
+    .imp-1{
+        padding-top: 13px;
+    }
+}
+
+@media(max-width: 768px){
+    .q{
+        font-size: var(--size-18);
+    }
+    .quest{
+        margin: 0 15%;
+    }
+    .mid-1 p{
+        font-size: var(--size-20);
+    }
+    .bottom-1{
+        font-size: 13px;
+    }
+    .right p{
+        font-size: var(--size-18);
+    }
+    .imp-1{
+        padding-top: 13px;
+    }
 }
 </style>
