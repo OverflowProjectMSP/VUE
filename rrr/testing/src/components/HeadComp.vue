@@ -1,11 +1,22 @@
 <script>
-
+export default {
+    data(){
+        return{
+            yes : true
+        }
+    },
+    methods: {
+        inverse() {
+            yes = !yes
+        }
+    }
+}
 </script>
 
 <template>
 <div class="head-1">
     <p class="q">Вопросы пользователя</p>
-    <a class="vse">Все  вопросы(2)</a>
+    <a class="vse" href="" @click="inverse">Все  вопросы(2)</a>
 </div>
 </template>
 

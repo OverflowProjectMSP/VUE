@@ -6,22 +6,40 @@ import FooterComp from "./components/FooterComp.vue"
 import HeadComp from "./components/HeadComp.vue"
 // Описываем компонент
 export default {
-  components: {
-    HeaderComp,
-    VidComp,
-    FooterComp, 
-    HeadComp
-   }
+    components: {
+        HeaderComp,
+        VidComp,
+        FooterComp, 
+        HeadComp
+    },
+    data(){
+        return{
+            yes : true
+        }
+    },
+    methods: {
+        inverse(){
+            yes = !yes
+            console.log(yes)
+        }
+    }
 }
+
 </script>
 <!-- Вызываем компонент -->
 <template>
 <HeaderComp/>
-<HeadComp></HeadComp>
-<VidComp quest="Как в Python сделать класс?" sub="4" hours="19" views="473" ans="2" style="margin-top: 30px;"/>
-<VidComp quest="Как в CSS сделать класс?" sub="2" hours="67" views="483" ans="4"/>
-<VidComp quest="Как в HTML сделать тег?" sub="8" hours="14" views="783" ans="2"/>
-<VidComp quest="Какие типы данных есть в JS?" sub="6" hours="12" views="890" ans="1"/>
+<div v-if="yes">
+
+
+<HeadComp @click="inverse"></HeadComp>
+<VidComp  quest="Как в Python сделать класс?" sub="4" hours="19" views="473" ans="2" style="margin-top: 30px;"/>
+<VidComp  quest="Как в CSS сделать класс?" sub="2" hours="67" views="483" ans="4"/>
+<VidComp  quest="Как в HTML сделать тег?" sub="8" hours="14" views="783" ans="2"/>
+<VidComp  quest="Какие типы данных есть в JS?" sub="6" hours="12" views="890" ans="1"/>
+
+</div>
+<UserInfo v-if="!yes"></UserInfo>
 <!-- <FooterComp></FooterComp> -->
 </template>
 <!-- npm run dev прописывай в папке testing -->
