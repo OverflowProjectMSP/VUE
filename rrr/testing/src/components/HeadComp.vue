@@ -46,6 +46,7 @@ body{
     color: #2D72D9;
     font-size: 24px;
     text-decoration: none;
+    cursor: pointer;
 }
 .q{
     font-size: 24px;
@@ -74,6 +75,7 @@ body{
 @media(max-width: 576px){
     .vse{
         font-size: var(--size-18);
+        
     }
     .q{
         font-size: var(--size-18);
@@ -89,5 +91,10 @@ body{
         font-size: var(--size-18);
     }
 
+}
+.vse:hover{
+color: #000000;
+transition: all 1s;
+font-size: 25px;
 }
 </style>

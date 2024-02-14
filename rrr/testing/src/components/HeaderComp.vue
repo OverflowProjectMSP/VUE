@@ -96,7 +96,7 @@ header{
     color: black;
 }
 .button-search:hover {
-    background-color: black;
+    background-color: rgb(255, 255, 255);
     color: white;
     transition: all 1s;
 }
@@ -157,7 +157,7 @@ li {
     color: white;
 }
 .nav-link:hover {
-    color: black;
+    color: rgb(255, 255, 255);
 
 }
 .navbar-toggler-icon {
