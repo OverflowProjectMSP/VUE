@@ -4,13 +4,15 @@ import HeaderComp from "./components/HeaderComp.vue";
 import VidComp from "./components/VidComp.vue";
 import FooterComp from "./components/FooterComp.vue"
 import HeadComp from "./components/HeadComp.vue"
+import UserInfo from "./components/UserInfo.vue"
 // Описываем компонент
 export default {
     components: {
         HeaderComp,
         VidComp,
         FooterComp, 
-        HeadComp
+        HeadComp,
+        UserInfo
     },
     data(){
         return{

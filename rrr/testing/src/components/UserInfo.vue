@@ -23,7 +23,7 @@
             <hr>
             <div class="row">
                 <div class="col-12" style="text-align: center;">
-                    <img src="assets/4213460-account-avatar-head-person-profile-user_115386.png" style="height: 100px;">
+                    <img src="../assets/4213460-account-avatar-head-person-profile-user_115386.png" style="height: 100px;">
                     <p style="color: gray;">Ваша фотография.</p>
                     <p style="color: gray;">Размер загружаемой фотографии <br> не должен быть более 2 МБ.</p>
                     <button id="download">Загрузить</button>
