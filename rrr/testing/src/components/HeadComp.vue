@@ -7,7 +7,7 @@ export default {
     },
     methods: {
         inverse() {
-            yes = !yes
+            this.yes = !this.yes
         }
     }
 }
@@ -46,7 +46,7 @@ body{
     color: #2D72D9;
     font-size: 24px;
     text-decoration: none;
-    cursor: pointer;
+
 }
 .q{
     font-size: 24px;
