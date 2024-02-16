@@ -5,6 +5,7 @@ import VidComp from "./components/VidComp.vue";
 import FooterComp from "./components/FooterComp.vue"
 import HeadComp from "./components/HeadComp.vue"
 import UserInfo from "./components/UserInfo.vue"
+import hours from "./components/hours.vue"
 // Описываем компонент
 export default {
     components: {
@@ -12,7 +13,8 @@ export default {
         VidComp,
         FooterComp, 
         HeadComp,
-        UserInfo
+        UserInfo, 
+        hours
     },
     data(){
         return{
