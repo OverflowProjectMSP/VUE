@@ -92,9 +92,5 @@ body{
     }
 
 }
-.vse:hover{
-color: #000000;
-transition: all 1s;
-font-size: 25px;
-}
+
 </style>
