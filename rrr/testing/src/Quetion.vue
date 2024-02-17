@@ -15,13 +15,7 @@ export default{
     },
         methods: {
             prevue() {
-            
-                    if (this.textarea.value.length < 3) {
-                this.tek = !this.tek;
-                } else {
-                console.log(`Ошибка`)
-            }
-                
+                this.tek = !this.tek
             }
         }
     }
@@ -49,7 +43,7 @@ export default{
             <div class="row">
                 <div class="col-12">
                     <div class="input-group mb-3">
-                        <textarea class="text-area text-box multi-line f" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="syt"></textarea>
+                        <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="syt"></textarea>
                     </div>
                 </div>
             </div>
@@ -80,7 +74,7 @@ export default{
                 <div class="row pt-5">
                     <div class="col-6">
                         <select class="form-select" v-model="sloz">
-                            <option selected value="Простой">Простой</option>
+                            <option selected value="ghfskhs">Простой</option>
                             <option value="Средний">Средний</option>
                             <option value="Сложный">Сложный</option>
                         </select>
@@ -111,20 +105,20 @@ export default{
         <div class="left">
             <div class="top-1">
                 <div class="name"><p><img src="" alt="" class="t">Python</p></div>
-                <div class="id middle"><p><img src="" alt="" class="t">{{sloz}}</p></div>
+                <div class="id middle"><p><img src="" alt="" class="t">{{ sloz }}</p></div>
             </div>
             <div class="mid-1">
                 <p>{{syt}}</p>
             </div>
             <div class="bottom-1">
-                <div class="el">0 подписчика</div>
-                <div class="el">0 часов назад</div>
-                <div class="el -d">0 просмотра</div>
+                <div class="el">афыва подписчика</div>
+                <div class="el">аывфыв часов назад</div>
+                <div class="el -d">ывфаыв просмотра</div>
             </div>
         </div>
         <div class="right">
             <div class="right-in">
-                <p class="t-alig-c">0</p>
+                <p class="t-alig-c">фываыва</p>
                 <p>Ответов</p>
             </div>
         </div>
@@ -136,7 +130,6 @@ export default{
     </main>
 </template>
 <style scoped>
-/* стили кнопок */
 #save{
     background-color: rgb(255, 255, 255);
     color: #7ac97a;
