@@ -15,7 +15,8 @@ export default{
     },
         methods: {
             prevue() {
-                this.tek = !this.tek
+               
+                    this.tek = !this.tek
             }
         }
     }
@@ -58,7 +59,7 @@ export default{
             <div class="row">
                 <div class="col-12">
                     <div class="input-group mb-3">
-                        <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;"></textarea>
+                        <textarea class="text-area text-box multi-line yy" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;"></textarea>
                     </div>
                 </div>
             </div>
@@ -111,14 +112,14 @@ export default{
                 <p>{{syt}}</p>
             </div>
             <div class="bottom-1">
-                <div class="el">афыва подписчика</div>
-                <div class="el">аывфыв часов назад</div>
-                <div class="el -d">ывфаыв просмотра</div>
+                <div class="el">0 подписчика</div>
+                <div class="el">0 часов назад</div>
+                <div class="el -d">0 просмотра</div>
             </div>
         </div>
         <div class="right">
             <div class="right-in">
-                <p class="t-alig-c">фываыва</p>
+                <p class="t-alig-c">0</p>
                 <p>Ответов</p>
             </div>
         </div>
