@@ -11,12 +11,27 @@ export default{
             tek: false,
             syt: ``,
             sloz: ``,
+            good: `Вопрос готов для предпросмотра.`,
+            nogood: `Хм... Вы уверены, что все символы введены правильно?`,
+            forlabel: ``,
+            greenlabel: true,
+            class: `green`,
+            
         }
     },
         methods: {
             prevue() {
-               
+                if (this.syt.length > 5) {
                     this.tek = !this.tek
+                    this.forlabel = this.good
+
+                } else {
+                    console.log(`Ошибка`)
+                    this.tek = this.tek
+                    this.forlabel = this.nogood
+                    this.class = `red`
+                    
+                }
             }
         }
     }
@@ -44,7 +59,8 @@ export default{
             <div class="row">
                 <div class="col-12">
                     <div class="input-group mb-3">
-                        <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="syt"></textarea>
+                        <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="texting" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="syt"></textarea>
+                        <label for="texting" :class="class">{{forlabel}}</label>
                     </div>
                 </div>
             </div>
@@ -153,10 +169,14 @@ export default{
     margin-bottom: 50px;
 }
 
+/* стили лейбла */
 
-
-
-
+ .green{
+    color: green;
+}
+.red {
+    color: red;
+}
 
 
 /* тут стили виджета */
