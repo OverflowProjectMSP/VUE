@@ -21,7 +21,8 @@ export default{
     },
         methods: {
             prevue() {
-                if (this.syt.length > 5) {
+                if (this.syt.length > 0) {
+                    this.class = `green`
                     this.tek = !this.tek
                     this.forlabel = this.good
 
