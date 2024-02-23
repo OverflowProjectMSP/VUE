@@ -6,7 +6,7 @@
 <h5 class="title card-title">Программирует на</h5>
   <div class="row g-0">
     <div class="d-flex justify-content-around">
-      <img src="../assets/js.jpg" class=" image img-fluid rounded-start" alt="...">
+      <img src="../../assets/js.jpg" class=" image img-fluid rounded-start" alt="...">
       <div class="card-body">
         <p class="card-title">JavaScript <br> работатет с <br> файлом index.js</p>
       </div>   
@@ -14,7 +14,7 @@
         <div class="d-flex justify-content-around ">
         <span class="time card-title" type="time">12:53:50</span>
         <button type="button" class="width btn btn-primary ">Стоп</button>
-        <button type="button" class="btn btn-primary btn-sm"><img src="../assets/video-pause-button.png" width="25px"></button>
+        <button type="button" class="btn btn-primary btn-sm"><img src="../../assets/video-pause-button.png" width="25px"></button>
         </div> 
     </div>
 </div>

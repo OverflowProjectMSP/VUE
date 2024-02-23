@@ -1,9 +1,11 @@
 <script>
-import HeaderComp from "./components/HeaderComp.vue"
+import HeaderComp from "./components/MainComponents/HeaderComp.vue"
+import SearchVue from './components/СomponetsForPages/Search.vue'
 
 export default{
     components: {
         HeaderComp,
+        SearchVue,
     },
 
     data() {
@@ -15,22 +17,24 @@ export default{
             nogood: `Хм... Вы уверены, что все символы введены правильно?`,
             forlabel: ``,
             greenlabel: true,
-            class: `green`,
+            l: `green`,
             
         }
     },
         methods: {
             prevue() {
                 if (this.syt.length > 0) {
-                    this.class = `green`
+                    this.l = `green`
                     this.tek = !this.tek
                     this.forlabel = this.good
+                    
 
                 } else {
                     console.log(`Ошибка`)
                     this.tek = this.tek
                     this.forlabel = this.nogood
-                    this.class = `red`
+                    this.l = `red`
+                    
                     
                 }
             }
@@ -40,8 +44,8 @@ export default{
 </script>
 <template>
     <HeaderComp/>
-    
     <main>
+
         <div class="container">
             <div class="row pt-3">
                 <div class="col-12">
@@ -61,7 +65,7 @@ export default{
                 <div class="col-12">
                     <div class="input-group mb-3">
                         <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="texting" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="syt"></textarea>
-                        <label for="texting" :class="class">{{forlabel}}</label>
+                        <label for="texting" :class="l">{{forlabel}}</label>
                     </div>
                 </div>
             </div>

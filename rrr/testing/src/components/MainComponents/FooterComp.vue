@@ -18,7 +18,7 @@
 
             
             <div class="image_above">
-                <img class="image_above_number_two" src="../assets/Vector_9.png" alt="Error image">
+                <img class="image_above_number_two" src="../../assets/Vector_9.png" alt="Error image">
             </div>
 
             <div class="team">

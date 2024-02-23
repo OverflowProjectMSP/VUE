@@ -1,38 +1,59 @@
-<script setup>
-defineProps({
-    quest: String,
-    sub: Number,
-    hours: Number,
-    views: Number,
-    ans: Number,
-})
+<script>
 let elList = document.querySelectorAll(`.el`);
-
 for (let i = 0; i < elList.length; i++) {
     let el = elList[i];
     el.classList.add(`t-alig-c`);
 }
+export default {
+    data() {
+        return {
+            Vidgets: [
+                {
+                    title: `Как создать премененную?`,
+                    sub: `34`,
+                    hours: `43`,
+                    views: 43,
+                    ans: 423,
+                },
+                {
+                    title: `Как создать премененную?`,
+                    sub: `34`,
+                    hours: `43`,
+                    views: 43,
+                    ans: 423,
+                },
+                {
+                    title: `Как создать премененную?`,
+                    sub: `34`,
+                    hours: `43`,
+                    views: 43,
+                    ans: 423,
+                },
+            ]
+        }
+    }
+}
 </script>
 
 <template>
-    <div class="vid">
+    <div class="vid" v-for="(item, index) in Vidgets">
         <div class="left">
             <div class="top-1">
                 <div class="name"><p><img src="" alt="" class="t">Python</p></div>
                 <div class="id middle"><p><img src="" alt="" class="t">Средне</p></div>
             </div>
             <div class="mid-1">
-                <p>{{quest}}</p>
+                <p>{{item.title}}</p>
             </div>
             <div class="bottom-1">
-                <div class="el">{{ sub }} подписчика</div>
-                <div class="el">{{ hours }} часов назад</div>
-                <div class="el -d">{{ views }} просмотра</div>
+                <div class="el">{{ item.sub }} подписчика</div>
+                <div class="el">{{ item.hours }} часов назад</div>
+                <div class="el -d">{{ item.views }} просмотра</div>
             </div>
         </div>
         <div class="right">
             <div class="right-in">
-                <p class="t-alig-c">{{ ans }}</p>
+                <p class="t-alig-c">{{ item.ans }}</p>
                 <p>Ответов</p>
             </div>
         </div>
