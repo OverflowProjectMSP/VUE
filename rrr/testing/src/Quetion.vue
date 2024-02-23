@@ -1,11 +1,12 @@
 <script>
+
 import HeaderComp from "./components/MainComponents/HeaderComp.vue"
 import SearchVue from './components/СomponetsForPages/Search.vue'
-
 export default{
     components: {
         HeaderComp,
         SearchVue,
+        
     },
 
     data() {

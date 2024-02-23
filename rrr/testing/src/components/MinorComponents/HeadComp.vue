@@ -15,7 +15,7 @@ export default {
 
 <template>
 <div class="head-1">
-    <p class="q">Вопросы пользователя</p>
+    <p class="q" @click="Olezha">Вопросы пользователя</p>
     <a class="vse" @click="inverse">Все  вопросы(2)</a>
 </div>
 </template>
