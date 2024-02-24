@@ -22,7 +22,7 @@ export default {
   <page-end>
 
   </page-end>
-  
+  <router-view></router-view>
 </template>
 
 <style scoped>
