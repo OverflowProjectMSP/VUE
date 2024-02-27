@@ -1,12 +1,18 @@
 <script>
-
+export default {
+  data() {
+    return {
+      
+    }
+  }
+}
 
 </script>
 <template>
   
  
         <header>
-            <nav class="navbar navbar-expand-lg  d-flex align-items-center rounded-0">
+            <nav class="navbar navbar-expand-xl  d-flex align-items-center rounded-0">
               <div class="container-fluid ">
                 <a class="navbar-brand" href="#"><div class="logo-container mt-1"><img src="../../assets/apple-touch-icon@2.png" alt="" class="logo"></div></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,15 +29,10 @@
                         <a class="nav-link disabled text-white" href="#">Форум</a>
                       </li>
                       <li class="nav-item dropdown mt-1">
-                        <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link  text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           Статьи
                         </a>
-                        <ul class="dropdown-menu text-white">
-                          <li><a class="dropdown-item text-black" href="#">Java Script</a></li>
-                          <li><a class="dropdown-item text-black" href="#">Python</a></li>
-                          <li><hr class="dropdown-divider text-black"></li>
-                          <li><a class="dropdown-item text-black" href="#">Топ статей</a></li>
-                        </ul>
+                       
                       </li>
                       <li class="nav-item mt-1">
                         <a class="nav-link disabled text-white" aria-disabled="true">FAQ</a>
@@ -64,6 +65,7 @@ margin-top: -20px;
 header{
     background-color: #3B82F6;
     width: auto;
+    border-radius: 0px 0px 5px 5px;
 }
 
 
@@ -166,6 +168,21 @@ li {
   width: 50px;
   height: 50px;
 }
+@media  (max-width: 1200px) {
+  
+  .navbar-nav {
+    gap: 0px;
+    margin-left: 14px;
+  }
+  .ava {
+  margin-top: -60px;
+}
+.them {
+margin-left: 7%;
+margin-top: 5%;
+}
+}
+
 @media  (max-width: 1000px) {
   
     .navbar-nav {
@@ -176,12 +193,40 @@ li {
     margin-top: -60px;
 }
 .them {
-  margin-left: 19%;
+  margin-left: 9%;
   margin-top: 5%;
 }
 
 .form input {
   width: 210px;
+}
+}
+@media  (max-width: 800px) {
+
+.them {
+margin-left: 10%;
+margin-top: 5%;
+}
+}
+@media  (max-width: 600px) {
+
+.them {
+margin-left: 17%;
+margin-top: 5%;
+}
+}
+@media  (max-width: 420px) {
+
+.them {
+margin-left: 20%;
+margin-top: 5%;
+}
+}
+@media  (max-width: 340px) {
+
+.them {
+margin-left: 25%;
+margin-top: 5%;
 }
 }
 </style>

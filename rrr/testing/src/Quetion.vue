@@ -1,156 +1,40 @@
 <script>
+import FooterComp from './components/MainComponents/FooterComp.vue';
+import HeaderComp from "./components/MainComponents/HeaderComp.vue";
+import QuetionComp from "./components/MainComponents/QuetionComp.vue";
 
-import HeaderComp from "./components/MainComponents/HeaderComp.vue"
-import SearchVue from './components/СomponetsForPages/Search.vue'
 export default{
     components: {
         HeaderComp,
-        SearchVue,
+        QuetionComp,
+        FooterComp,
         
     },
 
     data() {
         return {
-            tek: false,
-            syt: ``,
+            Vid: false,
+            Input: ``,
             sloz: ``,
             good: `Вопрос готов для предпросмотра.`,
             nogood: `Хм... Вы уверены, что все символы введены правильно?`,
             forlabel: ``,
             greenlabel: true,
-            l: `green`,
+            color: `green`,
+            language: ``
             
         }
     },
         methods: {
-            prevue() {
-                if (this.syt.length > 0) {
-                    this.l = `green`
-                    this.tek = !this.tek
-                    this.forlabel = this.good
-                    
-
-                } else {
-                    console.log(`Ошибка`)
-                    this.tek = this.tek
-                    this.forlabel = this.nogood
-                    this.l = `red`
-                    
-                    
-                }
-            }
+          
         }
     }
 
 </script>
 <template>
     <HeaderComp/>
-    <main>
-
-        <div class="container">
-            <div class="row pt-3">
-                <div class="col-12">
-                    <h3>Новый вопрос</h3>
-                </div>
-            </div>
-            <hr>
-            <div class="row">
-                <div class="col-12"><h4>Суть вопроса</h4></div>
-            </div>
-            <div class="row" style="display: flex; gap: 40px;">
-                <div class="col-12">
-                    <h5 style="color: gray; font-weight: 400;">Сформулируйте вопрос так, чтобы сразу было понятно, о чём речь.</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="input-group mb-3">
-                        <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="texting" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="syt"></textarea>
-                        <label for="texting" :class="l">{{forlabel}}</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12"><h4>Детали вопроса</h4></div>
-            </div>
-            <div class="row" style="display: flex; gap: 40px;">
-                <div class="col-12">
-                    <h5 style="color: gray; font-weight: 400;">Опишите в подробностях свой вопрос, чтобы получить более точный ответ.</h5>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="input-group mb-3">
-                        <textarea class="text-area text-box multi-line yy" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;"></textarea>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row pt-5">
-                <div class="col-6">
-                    <h4>Сложность вопроса</h4>
-                </div>
-                <div class="col-6">
-                    <h4>Теги вопроса</h4>
-                </div>
-                
-                <div class="row pt-5">
-                    <div class="col-6">
-                        <select class="form-select" v-model="sloz">
-                            <option selected value="ghfskhs">Простой</option>
-                            <option value="Средний">Средний</option>
-                            <option value="Сложный">Сложный</option>
-                        </select>
-                    </div>
-                    <div class="col-6">
-                        <select class="form-select" style="background-image: url();">
-                            <option selected>Python</option>
-                            <option value="1">HTML5</option>
-                            <option value="2">Java</option>
-                            <option value="3">PHP</option>
-                            <option value="4">JavaScript</option>
-                            <option value="5">C++</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row pt-5 block">
-                    <div class="col-6">
-                        <button id="save"><b>Опубликовать</b></button>
-                    </div>
-                    <div class="col-6">
-                        <button id="preview" @click="prevue"><b>Предпосмотр</b></button>
-                    </div>
-            </div>
-
-
-            <!-- виджет -->
-                <div class="vid" v-if="tek">
-        <div class="left">
-            <div class="top-1">
-                <div class="name"><p><img src="" alt="" class="t">Python</p></div>
-                <div class="id middle"><p><img src="" alt="" class="t">{{ sloz }}</p></div>
-            </div>
-            <div class="mid-1">
-                <p>{{syt}}</p>
-            </div>
-            <div class="bottom-1">
-                <div class="el">0 подписчика</div>
-                <div class="el">0 часов назад</div>
-                <div class="el -d">0 просмотра</div>
-            </div>
-        </div>
-        <div class="right">
-            <div class="right-in">
-                <p class="t-alig-c">0</p>
-                <p>Ответов</p>
-            </div>
-        </div>
-    </div>
-
-            </div>
-            </div>
-       
-    </main>
+    <router-view></router-view>
+  
 </template>
 <style scoped>
 #save{
