@@ -39,9 +39,16 @@
 .dropdown-center{
     margin-left: 15px;
 }
+.content input{
+    width: 400px;
+}
 @media  (max-width: 1000px){
 .content{
     flex-wrap: wrap;
+}
+.content .text{
+    margin-right: 100px;
+
 }
 }
 </style>

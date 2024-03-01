@@ -4,7 +4,7 @@ export default createRouter({
   history: createWebHashHistory(),
   routes: [
     {
-      path: "/",
+      path: "/:pathMatch(.*)*",
       component: () => import("../src/components/MainComponents/ErrorFour.vue"),
     },
     {
@@ -19,6 +19,10 @@ export default createRouter({
     {
       path: "/Main",
       component: () => import("./components/MainComponents/MainComp.vue"),
+    },
+    {
+      path: "/States",
+      component: () => import("./components/СomponetsForPages/StatesMain.vue"),
     },
   ],
 });
