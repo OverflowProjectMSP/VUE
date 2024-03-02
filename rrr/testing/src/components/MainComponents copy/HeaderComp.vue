@@ -1,28 +1,8 @@
 <script>
-import BlindWindow from '../СomponetsForPages/BlindWindow.vue'
-
 export default {
-
-  components: {
-    BlindWindow,
-  },
-    
   data() {
     return {
-      Show: false,
-      Errors: [{
-        title: `Функция в разработке...`,
-        
-      }]
-    }
-  },
-  methods:{
-    Close(Show) {
-      this.Show = !this.Show;
       
-    },
-    Open() {
-      this.Show = !this.Show;
     }
   }
 }
@@ -65,7 +45,7 @@ export default {
                       <input class="form-control  inp " type="search" placeholder="Найти статью" aria-label="Search">
                   
                     </form>
-                    <div class="them-container" @click="Open">
+                    <div class="them-container">
                       <img src="../../assets/sun_112421.png" alt="" class="them">
                   </div>
                     <div class="ava-container">
@@ -73,9 +53,9 @@ export default {
                     </div>
                   </div>
               </div>
-            </nav>
-          </header>
-          <blind-window v-if="Show" :title="Errors[0].title" :Show="Show" @Close="Close" class="model"/>
+                
+              </nav>
+            </header>
          
 </template>
 <style scoped>

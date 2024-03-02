@@ -6,7 +6,7 @@ import FooterComp from "./components/MainComponents/FooterComp.vue"
 import HeadComp from "./components/MinorComponents/HeadComp.vue"
 import UserInfo from "./components/СomponetsForPages/UserInfo.vue"
 import hours from "./components/MinorComponents/hours.vue"
-import ModelWindowVue from './components/MainComponents/ModelWindow.vue';
+import ModelWindowVue from './components/СomponetsForPages/ModelWindow.vue';
 // Описываем компонент
 export default {
     components: {
@@ -20,24 +20,12 @@ export default {
     },
     data(){
         return{
-            yes: true,
-            Oleg: false,
-            none: "",
-            Giga: "",
+           
         }
     },
     methods: {
         
-        Olezha() {
-            this.Oleg = !this.Oleg;
-            this.none = "ttt"
-            this.Giga = `ggg`
-            
-        },
-        Close() {
-            this.Oleg = false;
-            this.none = ""
-        }
+       
     }
 }
 
@@ -45,44 +33,7 @@ export default {
 <!-- Вызываем компонент -->
 <template>
 
-    <div class="window" v-if="Oleg">
-            <div class="close">
-                <button class="btn-close" @click="Close">X</button>
-            </div>
-            <h3>Что вы хотите сделать?</h3>
-            <div class="buttons">
-                <form action="#!">
-                    <button class="btn">Создать статью</button>
-                </form>
-                <form action="#!">
-                    <button class="btn">Создать вопрос</button>
-                </form>
-            </div>
-        </div>
-
-<div :class="Giga">
-    <div :class="none">
-<HeaderComp/>
-
-
-
-
-
-<div v-if="yes">
-
-
-<HeadComp @click="Olezha"></HeadComp>
-<VidComp  style="margin-top: 30px;"/>
-<!-- <VidComp  quest="Как в CSS сделать класс?" sub="2" hours="67" views="483" ans="4"/>
-<VidComp  quest="Как в HTML сделать тег?" sub="8" hours="14" views="783" ans="2"/>
-<VidComp  quest="Какие типы данных есть в JS?" sub="6" hours="12" views="890" ans="1"/> -->
-
-</div>
-<UserInfo v-if="!yes"></UserInfo>
-
-<!-- <FooterComp></FooterComp> -->
-</div>
-</div>
+   
 </template>
 <!-- npm run dev прописывай в папке testing -->
 <style scoped>

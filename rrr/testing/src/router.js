@@ -24,5 +24,9 @@ export default createRouter({
       path: "/States",
       component: () => import("./components/СomponetsForPages/StatesMain.vue"),
     },
+    {
+      path: "/UserInfo",
+      component: () => import("./components/СomponetsForPages/UserInfo.vue"),
+    },
   ],
 });
