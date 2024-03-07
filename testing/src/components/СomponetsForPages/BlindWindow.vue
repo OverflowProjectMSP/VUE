@@ -13,7 +13,7 @@ export default {
 </script>
 
 <template>
-    <transition name="modal-fade">
+    <transition name="modal-fade" >
 
     <div class="modal-backdrop">
     <div class="window">

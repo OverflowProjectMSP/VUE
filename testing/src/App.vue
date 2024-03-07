@@ -30,10 +30,11 @@ export default {
 }
 
 </script>
-<!-- Вызываем компонент -->
+<!-- Вызываем компонент --> 
 <template>
-
-   
+<header-comp/>
+<router-link/>
+<footer-comp/>
 </template>
 <!-- npm run dev прописывай в папке testing -->
 <style scoped>

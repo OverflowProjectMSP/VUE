@@ -17,7 +17,7 @@ export default{
             Input: ``,
             sloz: ``,
             good: `Вопрос готов для предпросмотра.`,
-            nogood: `Хм... Вы уверены, что все символы введены правильно?`,
+            nogood: `Вы уверены, что все символы введены правильно?`,
             forlabel: ``,
             greenlabel: true,
             color: `green`,
@@ -34,6 +34,7 @@ export default{
 <template>
     <HeaderComp/>
     <router-view></router-view>
+    <footer-comp/>
   
 </template>
 <style scoped>

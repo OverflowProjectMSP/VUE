@@ -31,7 +31,7 @@ export default{
                     this.color = `green`;
                     this.Vid = !this.Vid;
                     this.forlabel = this.good;
-                     
+                
 
                 } else {
                     console.log(`Ошибка`)
@@ -87,6 +87,7 @@ export default{
                 <div class="col-12">
                     <div class="input-group mb-3">
                         <textarea class="text-area text-box multi-line yy" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;"></textarea>
+                        <label for="texting" :class="color">{{forlabel}}</label>
                     </div>
                 </div>
             </div>
@@ -106,6 +107,7 @@ export default{
                             <option value="Средний">Средний</option>
                             <option value="Сложный">Сложный</option>    
                         </select>
+                        <label for="texting" :class="color">{{forlabel}}</label>
                     </div>
                     <div class="col-6">
                         <select class="form-select" v-model="language">
@@ -116,6 +118,7 @@ export default{
                             <option value="JavaScript">JavaScript</option>
                             <option value="C++">C++</option>
                         </select>
+                        <label for="texting" :class="color">{{forlabel}}</label>
                     </div>
                 </div>
                 <div class="row pt-5 block">
