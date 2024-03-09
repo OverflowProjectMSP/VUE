@@ -3,25 +3,34 @@ export default {
     props: {
         Show: Boolean,
         title: String,
+    },
+    methods: {
+        CloseModal() {
+            this.$emit('CloseModal', this.Show)
+            console.log(0)
+        }
     }
 }
 </script>
 
 <template>
+    <div class="modal-backdrop">
     <div class="window">
         <div class="close">
-            <button class="btn-close">X</button>
+            <button class="btn-close" @click="CloseModal">X</button>
         </div>
         <h3>Что вы хотите сделать?</h3>
         <div class="buttons">
-            <form action="#!">
-                <button class="btn">Создать статью</button>
+            <form action="#/NewState">
+                <button class="btn" href="#/Main">Создать статью</button>
             </form>
-            <form action="#!">
+            <form action="#/Quetion">
                 <button class="btn">Создать вопрос</button>
             </form>
         </div>
     </div>
+</div>
+
 </template>
 
 <style scoped>
@@ -110,4 +119,16 @@ export default {
 
     cursor: pointer;
 }
+.modal-backdrop 
+    {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 </style>

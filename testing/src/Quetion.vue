@@ -34,7 +34,7 @@ export default{
 <template>
     <HeaderComp/>
     <router-view></router-view>
-    <footer-comp/>
+   
   
 </template>
 <style scoped>

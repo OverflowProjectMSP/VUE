@@ -18,7 +18,7 @@ export default {
 <template>
 <header-comp/>
 <router-view/>
-<footer-comp/>
+
 </template>
 
 <style scoped>

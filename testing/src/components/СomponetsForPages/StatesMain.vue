@@ -1,5 +1,5 @@
 <script>
-import Search from './Search.vue'
+import Search from './SearchComp.vue'
 
 
 

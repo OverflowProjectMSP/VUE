@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-
+import SearchComp from "./components/СomponetsForPages/SearchComp.vue";
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -10,19 +10,32 @@ export default createRouter({
 
     {
       path: "/Quetion",
-      component: () => import("../src/components/MainComponents/QuetionComp.vue"),
+      component: () =>
+        import("../src/components/MainComponents/QuetionComp.vue"),
     },
     {
-      path: "/Main",
+      path: "/main",
       component: () => import("./components/MainComponents/MainComp.vue"),
-    },
-    {
-      path: "/States",
-      component: () => import("./components/СomponetsForPages/StatesMain.vue"),
     },
     {
       path: "/UserInfo",
       component: () => import("./components/СomponetsForPages/UserInfo.vue"),
+    },
+    {
+      path: "/Search",
+      component: () => import("./components/СomponetsForPages/SearchComp.vue"),
+    },
+    {
+      path: "/States",
+      component: () => import("./States.vue"),
+    },
+    {
+      path: "/Registration",
+      component: () => import("./components/СomponetsForPages/FormRegComp.vue"),
+    },
+    {
+      path: "/NewState",
+      component: () => import("./NewQuestion.vue"),
     },
   ],
 });

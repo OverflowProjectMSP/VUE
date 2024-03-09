@@ -14,7 +14,7 @@ export default{
             Input: ``,
             sloz: ``,
             good: `Вопрос готов для предпросмотра.`,
-            nogood: `Хм... Вы уверены, что все символы введены правильно?`,
+            nogood: `Вы уверены, что все символы введены правильно?`,
             forlabel: ``,
             greenlabel: true,
             color: `green`,
@@ -87,7 +87,7 @@ export default{
                 <div class="col-12">
                     <div class="input-group mb-3">
                         <textarea class="text-area text-box multi-line yy" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="info" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;"></textarea>
-                        <label for="texting" :class="color">{{forlabel}}</label>
+                        
                     </div>
                 </div>
             </div>
@@ -132,6 +132,7 @@ export default{
 
 
             <!-- виджет -->
+            <div class="container"></div>
                 <div class="vid" v-if="Vid">
         <div class="left">
             <div class="top-1">
@@ -158,6 +159,9 @@ export default{
             </div>
             </div>
        
+
+         
+
     </main>
 </template>
 <style scoped>

@@ -1,5 +1,16 @@
 <script>
+import VidComp from '../MainComponents/VidComp.vue'
 
+export default {
+    componets: {
+        VidComp,
+    },
+    data() {
+        return {
+           
+        }
+    }
+}
 
 </script>
 <template>
@@ -40,7 +51,7 @@
     margin-left: 15px;
 }
 .content input{
-    width: 400px;
+    width: 500px;
 }
 @media  (max-width: 1000px){
 .content{

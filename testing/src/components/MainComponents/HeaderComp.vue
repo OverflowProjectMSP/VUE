@@ -11,7 +11,7 @@ export default {
     return {
       Show: false,
       Errors: [{
-        title: `Функция в разработке...`,
+        title: `Функция в разработке.`,
         
       }]
     }
@@ -34,22 +34,22 @@ export default {
         <header>
             <nav class="navbar navbar-expand-xl  d-flex align-items-center rounded-0">
               <div class="container-fluid ">
-                <a class="navbar-brand" href="#"><div class="logo-container mt-1"><img src="../../assets/apple-touch-icon@2.png" alt="" class="logo"></div></a>
+                <a class="navbar-brand" href="#/Main"><div class="logo-container mt-1"><img src="../../assets/apple-touch-icon@2.png" alt="" class="logo"></div></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"><img src="" alt="" srcset=""><img src="../../assets/icons8-меню-50.png" alt="" class="icon-btn"></span>
+                  <span class="navbar-toggler-icon"></span>
                 </button>
                 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div class="container-contant"></div>
                     <h4 class="nav-item mr-0 ml-0">
-                      <a class="nav-link mt-2" aria-current="page" href="#">StackOverflow</a>
+                      <a class="nav-link mt-2" aria-current="page" href="#/Main">StackOverflow</a>
                     </h4>
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 mb-2">
                       <li class="nav-item mt-1">
                         <a class="nav-link disabled text-white" href="#">Форум</a>
                       </li>
                       <li class="nav-item dropdown mt-1">
-                        <a class="nav-link  text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link  text-white" href="#/States" >
                           Статьи
                         </a>
                        
