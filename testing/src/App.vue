@@ -19,22 +19,19 @@ export default {
         ModelWindowVue,
     },
     data(){
-        return{
-           
-        }
+        return{ pass}
     },
-    methods: {
-        
-       
-    }
+    methods: { pass }
 }
 
 </script>
 <!-- Вызываем компонент --> 
 <template>
-<header-comp/>
 <router-link/>
+
+<header-comp/>
 <footer-comp/>
+
 </template>
 <!-- npm run dev прописывай в папке testing -->
 <style scoped>
