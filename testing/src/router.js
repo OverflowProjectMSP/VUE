@@ -1,5 +1,4 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import SearchComp from "./components/СomponetsForPages/SearchComp.vue";
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -35,7 +34,11 @@ export default createRouter({
     },
     {
       path: "/NewState",
-      component: () => import("./NewQuestion.vue"),
+      component: () => import("./NewState.vue"),
+    },
+    {
+      path: "/Quetions",
+      component: () => import("./Quetions.vue"),
     },
   ],
 });

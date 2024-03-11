@@ -11,7 +11,7 @@ export default {
         }
     },
     props: {
-        item: Object,
+        quetion: Object,
         
     }
 }
@@ -21,22 +21,22 @@ export default {
     <div class="vid">
         <div class="left">
             <div class="top-1"> 
-                <div class="name"><p><img src="" alt="" class="t">{{ item.language }}</p></div>
+                <div class="name"><p><img src="" alt="" class="t">{{ quetion.language }}</p></div>
                 <div class="id middle"><p><img src="" alt="" class="t">Средне</p></div>
             </div>
             <div class="mid-1">
-                <p>{{ item.title }}</p>
+                <p>{{ quetion.title }}</p>
             </div>
             <div class="bottom-1">
-                <div class="el">{{item.subscribers}} подписчика(ов)</div>
-                <div class="el"> {{item.hours}} часов(a) назад</div>
-                <div class="el -d">{{item.views}} просмотра(ов)</div>
+                <div class="el">{{quetion.subscribers}} подписчика(ов)</div>
+                <div class="el"> {{quetion.hours}} часов(a) назад</div>
+                <div class="el -d">{{quetion.views}} просмотра(ов)</div>
             </div>
         </div>
         <div class="right">
             <div class="right-in">
                 <p class="t-alig-c"></p>
-                <p>{{item.ans}} Ответ(ов)</p>
+                <p>{{quetion.ans}} Ответ(ов)</p>
             </div>
         </div>
     </div>

@@ -32,7 +32,7 @@ export default {
                     hours: 0,
                     views: 43,
                     ans: 423,
-                    language: 'Python',
+                    language: 'JS',
 
                 },
             ],
@@ -57,7 +57,7 @@ export default {
 <div class="content d-flex align-items-center">
     <input type="text" class="form-control" placeholder="Название проблемы" aria-label="First name">
     <input type="text" class="form-control" placeholder="Автор" aria-label="Last name">
-   
+   <!-- селект -->
   <div class="dropdown-center">
   <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
     <img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span>
@@ -68,7 +68,7 @@ export default {
     <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
   </ul>
 </div>
-
+<!-- плюсик -->
 <div class="contain" @click="OpenModal" >
     <button class="plus"><p class="p">+</p></button>
   </div>
@@ -79,7 +79,7 @@ export default {
 
 
 
-
+<!-- Див с виджетами -->
 <div class="con mt-3">
 <vid-comp :item="item"  v-for="item in items"/>
 </div>
@@ -147,13 +147,17 @@ h4{
     margin-left: 0.2px;
     margin-right: 1px;
 }
+.dropdown-center{
+    margin-right:10px;
+}
 
 @media  (max-width: 1000px){
-.content{
-    flex-wrap: wrap;
-}
+
 .content input{
     width: 200px;
+}
+.dropdown-center{
+    
 }
 }
 </style>

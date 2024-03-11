@@ -53,7 +53,7 @@ export default {
             </select>
         </div>
         <div class="form2">
-            <select class="form-select" style="border-color: #B3B3B3;" aria-label="Default select example">
+            <select class="form-select" style="border-color: #B3B3  3;" aria-label="Default select example">
                 <option selected class="python"><b>Python</b></option>
                 <option value="1" class="js"><b>JS</b></option>
                 <option value="2" class="php"><b>PHP</b></option>

@@ -132,7 +132,7 @@ export default{
 
 
             <!-- виджет -->
-            <div class="container"></div>
+            <div class="container">
                 <div class="vid" v-if="Vid">
         <div class="left">
             <div class="top-1">
@@ -158,7 +158,7 @@ export default{
 
             </div>
             </div>
-       
+        </div>
 
          
 
