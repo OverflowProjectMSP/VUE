@@ -44,9 +44,6 @@
   html {
       scroll-behavior: smooth
       }
-footer{
-    
-}
   .help_end {
       max-width: 100%;
       padding-bottom: 10px;

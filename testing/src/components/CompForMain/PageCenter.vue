@@ -144,6 +144,7 @@ export default {
     }
     .wehave-item img {
         width: 50px;
+        user-select: none;
     }
     .wehave-item {
         display: flex;
@@ -154,6 +155,7 @@ export default {
         height: 150px;
         padding-top: 10px;
         transition: 150ms;
+        cursor: pointer;
     }
     .wehave-item:hover {
         background-color: #ededed;
