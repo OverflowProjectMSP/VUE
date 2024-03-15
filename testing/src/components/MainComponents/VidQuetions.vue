@@ -1,4 +1,5 @@
 <script>
+
 let elList = document.querySelectorAll(`.el`);
 for (let i = 0; i < elList.length; i++) {
     let el = elList[i];
@@ -8,35 +9,37 @@ export default {
     data() {
         return {
             
-        }
-    },
+    }
+   
+},
     props: {
         quetion: Object,
-        
-    }
+        Show: Boolean,
+}
+
 }
 </script>
 
 <template>
     <div class="vid">
         <div class="left">
-            <div class="top-1"> 
-                <div class="name"><p><img src="" alt="" class="t">{{ quetion.language }}</p></div>
-                <div class="id middle"><p><img src="" alt="" class="t">Средне</p></div>
+            <div class="top-1">
+                <div class="name"><p><img src="" alt="" class="t">{{quetion.language}}</p></div>
+                <div class="id middle"><p><img src="" alt="" class="t">{{quetion.complexity}}</p></div>
             </div>
             <div class="mid-1">
-                <p>{{ quetion.title }}</p>
+                <p class="name-limit">{{quetion.title}}</p>
             </div>
             <div class="bottom-1">
-                <div class="el">{{quetion.subscribers}} подписчика(ов)</div>
-                <div class="el"> {{quetion.hours}} часов(a) назад</div>
-                <div class="el -d">{{quetion.views}} просмотра(ов)</div>
+                <div class="el">{{ quetion.subscribers }} подписчика(ов)</div>
+                <div class="el">{{ quetion.hours }} час(ов) назад</div>
+                <div class="el -d">{{ quetion.views }} просмотр(ов)</div>
             </div>
         </div>
         <div class="right">
             <div class="right-in">
-                <p class="t-alig-c"></p>
-                <p>{{quetion.ans}} Ответ(ов)</p>
+                <p class="t-alig-c">{{ quetion.answers }}</p>
+                <p>Ответ(ов)</p>
             </div>
         </div>
     </div>
@@ -53,13 +56,22 @@ export default {
     text-align: center;
 }
 /* виджет с вопросами */
+.left {
+    display: flex;
+    flex-direction: column;
+}
+
 .vid{
     background-color:#EEF1F4 ;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     border-radius: 15px;
+    margin-bottom: 10px;
     margin:0 20% 15px 20%;
+}
+.vid:last-child {
+    margin-bottom: 0;
 }
 
 /* общее расположение элементов */
@@ -108,10 +120,26 @@ export default {
 }
 /* серидина */
 .mid-1{
+    display: flex;
+    flex-wrap: wrap;
+
     font-size: 28px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
 }
 .mid-1 p{
     margin: 0;
+    text-wrap: wrap;
+}
+
+.name-limit {
+    width: 44ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 /* низ */
 .bottom-1{
@@ -146,6 +174,24 @@ div.vid:hover {
 }
 
 /* Адаптивка */
+
+@media(max-width: 1505px) {
+    .mid-1 p {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        display: inline-block;
+        text-overflow: ellipsis;
+    }
+    .mid-1 {
+        width: 85%;
+    }
+    .left {
+        width: 75%;
+    }
+}
+
 @media(max-width: 1200px){
     .q{
         font-size: var(--size-20);
@@ -160,6 +206,13 @@ div.vid:hover {
     }
     .mid-1 p{
         font-size: 24px;
+    }
+    
+}
+
+@media(max-width: 910px) {
+    .name-limit {
+        width: 17ch;
     }
     
 }
@@ -206,8 +259,33 @@ div.vid:hover {
     }
 }
 
+@media(max-width: 540px) {
+    .vid {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    .vid {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}
+
+@media(max-width: 400px) {
+    .bottom-1 {
+        flex-direction: column;
+    }
+    .el {
+        width: 100px;
+        border-right: none;
+        border-bottom: 1px solid #AEB8BC;
+    }
+    .el:last-child {
+        margin-bottom: 10px;
+    }
+}
 
 
 
 </style>
-

@@ -1,10 +1,10 @@
 <script>
-import VidComp from './components/MainComponents/VidComp.vue';
+import VidComp from './components/MainComponents/VidComp.vue'
 import ModelWind from './components/СomponetsForPages/ModelWind.vue';
 export default {
     components: {
-        VidComp,
-      ModelWind,  
+    VidComp,
+    ModelWind,  
     },
     data() {
         return {
@@ -14,8 +14,9 @@ export default {
                     subscribers: 50,
                     hours: 43,
                     views: 43,
-                    ans: 423,
+                    answers: 423,
                     language: 'Python',
+                    complexity: 'Средне',
 
                 },
                 {
@@ -23,17 +24,18 @@ export default {
                     subscribers: 50,
                     hours: 43,
                     views: 43,
-                    ans: 423,
-                    language: 'Python',
+                    answers: 423,
+                    language: 'C++',
+                    complexity: 'Средне',
                 },
                 {
                     title: `Как создать переменную?`,
                     subscribers: 45,
                     hours: 0,
                     views: 43,
-                    ans: 423,
-                    language: 'JS',
-
+                    answers: 423,
+                    language: 'Асембелер',
+                    complexity: 'Средне',
                 },
             ],
             Show: false,
@@ -58,23 +60,23 @@ export default {
     <input type="text" class="form-control" placeholder="Название проблемы" aria-label="First name">
     <input type="text" class="form-control" placeholder="Автор" aria-label="Last name">
    <!-- селект -->
-  <div class="dropdown-center">
-  <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
-    <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
-    <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
-  </ul>
-</div>
-<!-- плюсик -->
-<div class="contain" @click="OpenModal" >
-    <button class="plus"><p class="p">+</p></button>
+  <div class="down-menu d-flex align-items-center">
+      <div class="dropdown-center">
+      <button class="btn btn-light dropdown-toggle d-flex align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
+        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
+        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
+      </ul>
+      </div>
+      <!-- плюсик -->
+      <div class="contain" @click="OpenModal" >
+        <button class="plus"><p class="p">+</p></button>
+      </div>
+      </div>
   </div>
- 
-
-</div>
 
 
 
@@ -89,10 +91,6 @@ export default {
 
 
 </template>
-
-
-
-
 
 <style scoped>
 h4{
@@ -151,13 +149,27 @@ h4{
     margin-right:10px;
 }
 
-@media  (max-width: 1000px){
+@media (max-width: 900px){
 
 .content input{
     width: 200px;
 }
-.dropdown-center{
-    
+.content, h4 {
+    margin-left: 100px;
+    margin-right: 100px;
 }
+.dropdown-center{
+    margin: 2px !important;
+}
+}
+@media (max-width: 800px) {
+    .content, h4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h4 {
+        font-size: 30px;
+    }
 }
 </style>
