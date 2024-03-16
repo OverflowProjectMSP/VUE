@@ -81,7 +81,6 @@ export default {
         margin-bottom: 5px;
     }
 }
-.select-block {
 .select-block { 
     width: fit-content;
 }
