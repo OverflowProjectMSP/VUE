@@ -61,6 +61,7 @@ export default {
                 <option value="middle">Средние</option>
                 <option value="hard">Сложные</option>
             </select>
+        
         </div>
     </div>
 
@@ -69,7 +70,7 @@ export default {
 </template>
 
 <style scoped>
-.select-block {
+.select-block { 
     width: fit-content;
 }
 .select-block img {

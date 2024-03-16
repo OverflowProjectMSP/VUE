@@ -9,8 +9,7 @@ export default createRouter({
 
     {
       path: "/Quetion",
-      component: () =>
-        import("../src/components/MainComponents/QuetionComp.vue"),
+      component: () => import("../src/components/MainComponents/QuetionComp.vue"),
     },
     {
       path: "/main",
@@ -30,7 +29,7 @@ export default createRouter({
     },
     {
       path: "/Registration",
-      component: () => import("./components/СomponetsForPages/FormRegComp.vue"),
+      component: () => import("./components/СomponetsForPages/RegisterPage.vue"),
     },
     {
       path: "/NewState",
