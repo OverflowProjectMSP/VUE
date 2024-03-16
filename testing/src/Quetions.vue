@@ -51,7 +51,8 @@ export default {
 </script>
 
 <template>
-<div class="active-container d-flex flex-column p-2">
+<div class="quest-menu mt-3">
+    <div class="active-container d-flex flex-column p-2">
         <h2>Активные вопросы</h2>
         <p>В данном разделе находятся вопросы, которые ждут именно <b>твоего</b> ответа!</p>
         <div class="select-block d-flex border rounded-3 gap-1 py-0">
@@ -64,12 +65,23 @@ export default {
         
         </div>
     </div>
+</div>
 
 <vid-quetions :quetion="quetion"  v-for="quetion in quetions"/>
 
 </template>
 
 <style scoped>
+.quest-menu {
+    margin:0 20% 15px 20%;
+}
+@media(max-width: 500px) {
+    .quest-menu {
+        margin: 0;
+        margin-bottom: 5px;
+    }
+}
+.select-block {
 .select-block { 
     width: fit-content;
 }
