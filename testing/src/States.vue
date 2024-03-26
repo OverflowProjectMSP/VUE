@@ -20,7 +20,7 @@ export default {
 
                 },
                 {
-                    title: `Как создать переменную?`,
+                    title: `Как созопоодать переменную?`,
                     subscribers: 50,
                     hours: 43,
                     views: 43,
