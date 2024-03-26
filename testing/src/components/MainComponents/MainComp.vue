@@ -23,7 +23,7 @@ export default {
   <page-end>
   </page-end>
 
-  
+
 
 </template>
 
