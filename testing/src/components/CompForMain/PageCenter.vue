@@ -57,7 +57,6 @@ export default {
     }
     hr {
         margin-top: 20px;
-        width: 600px;
     }
 
     .pagecenter {
@@ -179,6 +178,9 @@ export default {
         .lang-item {
             width: 90px;
             height: 50px;
+        }
+        hr {
+            width: 100%;
         }
     }
     @media (max-width: 950px) {
