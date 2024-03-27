@@ -39,5 +39,9 @@ export default createRouter({
       path: "/Quetions",
       component: () => import("./Quetions.vue"),
     },
+    {
+      path: "/Login",
+      component: () => import("./components/СomponetsForPages/EnterPage.vue"),
+    },
   ],
 });

@@ -8,7 +8,6 @@ export default {
 </script>
 
 <template>
-<body>
     <head-comp/>
     <div class="title">
             <h2>
@@ -78,9 +77,46 @@ export default {
                     </div>
             </div>
 
+<div class="preview-container" v-if="true">
 
 
-</body>
+
+
+    <div class="container">
+                <div class="vid" v-if="Vid">
+        <div class="left">
+            <div class="top-1">
+                <div class="name"><p><img src="" alt="" class="t">{{ language }}</p></div>
+                <div class="id middle"><p><img src="" alt="" class="t">{{ sloz }}</p></div>
+            </div>
+            <div class="mid-1">
+                <p>{{Input}}</p>
+            </div>
+            <div class="bottom-1">
+                <div class="el">0 подписчика</div>
+                <div class="el">0 часов назад</div>
+                <div class="el -d">0 просмотра</div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-in">
+                <p class="t-alig-c">0</p>
+                <p>Ответов</p>
+            </div>
+        </div>
+    </div>
+
+            </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+</div>
 </template>
 
 <style scoped>
