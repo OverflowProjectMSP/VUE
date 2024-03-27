@@ -2,11 +2,13 @@
 import PageStart from '../CompForMain/PageStart.vue'
 import PageCenter from '../CompForMain/PageCenter.vue'
 import PageEnd from '../CompForMain/PageEnd.vue'
+import ScrollBarComp from './ScrollBarComp.vue'
 export default {
   components: {
     PageStart,
     PageCenter,
     PageEnd,
+    ScrollBarComp
   }
 }
 </script>
@@ -23,7 +25,7 @@ export default {
   <page-end>
   </page-end>
 
-
+<ScrollBarComp />
 
 </template>
 
