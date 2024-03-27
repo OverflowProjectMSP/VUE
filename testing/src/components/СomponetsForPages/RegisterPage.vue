@@ -1,54 +1,75 @@
 <script>
 
-// const inputs = document.querySelectorAll('.form-item');
-
-//     inputs.forEach(input => {
-//         input.addEventListener('focus', function() {
-//             this.style.borderColor = 'blue';
-//         });
-
-//         input.addEventListener('blur', function() {
-//             this.style.borderColor = '#ccc';
-//         });
-//     });
-
 export default {
     data() {
         return {
             email: '',
             password: '',
+            isShowPassword: false,
+            showPassword: 'password',
             exPassword: '',
+            isShowExPassword: false,
+            showExPassword: 'password',
             error: '',
-            // isErrorBorder: false,
-            // errorBorderOne: {
-            //     outline: '2px solid #2a2a2a',
-            //     border: 'none'
-            // },
-            // errorBorderTwo: {
-            //     outline: '2px solid #2a2a2a',
-            //     border: 'none'
-            // },
-            // errorBorderThree: {
-            //     outline: '2px solid #2a2a2a',
-            //     border: 'none'
-            // },
+            eyeOpen1: true,
+            eyeOpen2: true,
+            eyeImg1: '/src/assets/eye.svg',
+            eyeImg2: '/src/assets/eye.svg',
+            nickname: ``,
         }
     },
     methods: {
         check() {
-            if (this.email === '') {
+            if (this.nickname === ``) {
+                this.error = '*Вы не ввели никнейм*'
+            }
+            else  if (this.email === '') {
                 this.error = '*Вы не ввели Email*'
-                //this.errorBorderOne.outline = '2px solid red'
             } else if (this.password === '') {
                 this.error = '*Вы не ввели пароль*'
-                //this.errorBorderTwo.outline = '2px solid red'
             } else if (this.exPassword === '') {
                 this.error = '*Вы не повторили пароль*'
-                //this.errorBorderThree.outline = '2px solid red'
-            } else {
+            } else if (this.password.length <= 9) {
+                this.error = '*Пароль должен включать 8 символов*'
+            } else if (!this.password.includes('*') ) {
+                this.error = '*Пароль должен включать спец символ*'
+            } else if (this.password !== this.exPassword) {
+                this.error = '*Пароли не совпадают'
+            }
+            else {
                 this.error = ''
             }
-        }
+            
+            
+            if (this.password !== this.exPassword) {
+                this.error = '*Пароли не совпадают'
+            }
+        },
+        toggleVisibility1() {
+            this.isShowPassword = !this.isShowPassword;
+            this.eyeOpen1 = !this.eyeOpen1
+
+            if (this.isShowPassword) {
+                this.showPassword = 'text'
+                this.eyeImg1 = '/src/assets/svg-editor-image2.svg'
+            } else {
+                this.showPassword = 'password'
+                this.eyeImg1 = '/src/assets/eye.svg'
+            }
+        },
+        toggleVisibility2() {
+            this.isShowExPassword = !this.isShowExPassword;
+            this.eyeOpen2 = !this.eyeOpen2
+
+            if (this.isShowExPassword) {
+                this.showExPassword = 'text'
+                this.eyeImg2 = '/src/assets/svg-editor-image2.svg'
+            } else {
+                this.showExPassword = 'password'
+                this.eyeImg2 = '/src/assets/eye.svg'
+            }
+        },
+        
     }
 }
 
@@ -58,12 +79,19 @@ export default {
     <div class="container">
         <h1>Регистрация</h1>
         <form action="#!">
+            <input class="form-item form-item-1" v-model="nickname" placeholder="Введите никнейм" type="email"  name="" id="">
             <input class="form-item form-item-1" v-model="email" placeholder="Email" type="email"  name="" id="">
-            <input class="form-item form-item-2" v-model="password" placeholder="Пароль" type="password" name="" id="">
-            <input class="form-item form-item-3" v-model="exPassword" placeholder="Повторите пароль" type="password" name="" id="">
+            <div class="password">
+                <input class="form-item form-item-2" :type="showPassword" v-model="password" placeholder="Пароль" type="password" name="password" id="password-input">
+                <img @click="toggleVisibility1" class="password-show" :src="eyeImg1" alt="">
+            </div>
+            <div class="exPassword">
+                <input class="form-item form-item-3" :type="showExPassword" v-model="exPassword" placeholder="Повторите пароль" type="password" name="exPassword" id="exPassword-input">
+                <img @click="toggleVisibility2" class="exPassword-show" :src="eyeImg2" alt="">
+            </div>
         </form>
         <div class="error-end-btn">
-            <p class="have_account">Уже есть аккаунт? <a href="#!">Войти</a></p>
+            <p class="have_account">Уже есть аккаунт? <a href="#/Login">Войти</a></p>
             <p class="error">{{ error }}</p>
             <button class="btn-reg" @click="check">Зарегистрироваться</button>
         </div>
@@ -153,4 +181,36 @@ div a {
     text-decoration: none;
     color: #4200FF;
 }
+
+
+.password {
+    position: relative;
+}
+
+.password-show {
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 12px;
+    width: 30px;
+
+}
+
+.exPassword {
+    position: relative;
+}
+
+.exPassword-show {
+    position: absolute;
+    cursor: pointer;
+    top: 5px;
+    right: 12px;
+    width: 30px;
+
+}
+
+
+/* .password-control.view {
+	background: url(../assets/eyeclose.svg) 0 0 no-repeat;
+} */
 </style>

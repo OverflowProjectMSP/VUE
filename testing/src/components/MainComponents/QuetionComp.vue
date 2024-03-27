@@ -15,28 +15,25 @@ export default{
             sloz: ``,
             good: `Вопрос готов для предпросмотра.`,
             nogood: `Вы уверены, что все символы введены правильно?`,
-            forlabel: ``,
             greenlabel: true,
             color: `green`,
-            language: ``
+            language: ``,
+            error: ''
             
         }
     },
         methods: {
             prevue() {
                 if (this.Input.length > 0 && this.sloz.length <= 7 && this.language.length >= 3) {
-                    
-
-
                     this.color = `green`;
                     this.Vid = !this.Vid;
-                    this.forlabel = this.good;
+                    this.error = this.good;
                 
 
                 } else {
                     console.log(`Ошибка`)
                     this.Vid = this.Vid;
-                    this.forlabel = this.nogood;
+                    this.error = this.nogood;
                     this.color = `red`;
 
                     
@@ -71,7 +68,7 @@ export default{
                 <div class="col-12">
                     <div class="input-group mb-3">
                         <textarea class="text-area text-box multi-line" data-val="true" data-val-length="Maximum = 2045 characters" data-val-length-max="10000" id="texting" name="info" cols="200" rows="3" style="border-color: #D3D3D3; border-radius: 5px;" v-model="Input" maxlength = "35"></textarea>
-                        <label for="texting" :class="color">{{forlabel}}</label>
+                       
                     </div>
                 </div>
             </div>
@@ -107,7 +104,7 @@ export default{
                             <option value="Средний">Средний</option>
                             <option value="Сложный">Сложный</option>    
                         </select>
-                        <label for="texting" :class="color">{{forlabel}}</label>
+                       
                     </div>
                     <div class="col-6">
                         <select class="form-select" v-model="language">
@@ -118,7 +115,7 @@ export default{
                             <option value="JavaScript">JavaScript</option>
                             <option value="C++">C++</option>
                         </select>
-                        <label for="texting" :class="color">{{forlabel}}</label>
+                        
                     </div>
                 </div>
                 <div class="row pt-5 block">
@@ -130,7 +127,7 @@ export default{
                     </div>
             </div>
 
-
+                <p class="error" :class="color">{{ error }}</p>
             <!-- виджет -->
             <div class="container">
                 <div class="vid" v-if="Vid">
@@ -186,7 +183,10 @@ export default{
 .block {
     margin-bottom: 50px;
 }
+.text-area{
+    padding: 10px;
 
+}
 /* стили лейбла */
 
  .green{
