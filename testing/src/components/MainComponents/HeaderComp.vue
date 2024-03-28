@@ -69,7 +69,7 @@ export default {
                       <img src="../../assets/sun_112421.png" alt="" class="them">
                   </div>
                     <div class="ava-container">
-                        <img src="https://avatars.dzeninfra.ru/get-zen_doc/1578906/pub_5cdbdfbd635d0800b447ae37_5cdbdfc2e1368c00b3e27ce3/scale_1200" alt="" class="ava">
+                       <a href="#/Profile"> <img src="https://avatars.dzeninfra.ru/get-zen_doc/1578906/pub_5cdbdfbd635d0800b447ae37_5cdbdfc2e1368c00b3e27ce3/scale_1200" alt="" class="ava"></a>
                     </div>
                   </div>
               </div>
