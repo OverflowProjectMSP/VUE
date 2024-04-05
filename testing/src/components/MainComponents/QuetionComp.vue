@@ -14,7 +14,7 @@ export default{
             Input: ``,
             sloz: ``,
             good: `Вопрос готов для предпросмотра.`,
-            nogood: `Вы уверены, что все символы введены правильно?`,
+            nogood: `Заполните все поля корректно`,
             greenlabel: true,
             color: `green`,
             language: ``,
@@ -50,7 +50,7 @@ export default{
     <main>
 
         <div class="container">
-            <div class="row pt-3">
+            <div class="row pt-4">
                 <div class="col-12">
                     <h3>Новый вопрос</h3>
                 </div>
@@ -89,15 +89,15 @@ export default{
                 </div>
             </div>
 
-            <div class="row pt-5">
+            <div class="row pt-4">
                 <div class="col-6">
                     <h4>Сложность вопроса</h4>
                 </div>
                 <div class="col-6">
-                    <h4>Теги вопроса</h4>
+                    <h4>Ваш язык программирования</h4>
                 </div>
                 
-                <div class="row pt-5">
+                <div class="row pt-1">
                     <div class="col-6">
                         <select class="form-select" v-model="sloz">
                             <option value="Простой">Простой</option>
@@ -167,18 +167,26 @@ export default{
     color: #7ac97a;
     border-color: #90EE90;
     border-radius: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 5px 15px;
     text-align: center;
+    transition: all 300ms;
 }
 #preview{
     background-color: rgb(255, 255, 255);
     color: #7ac97a;
     border-color: #90EE90;
     border-radius: 5px;
-    padding-right: 15px;
-    padding-left: 15px;
+    padding: 5px 15px;
     text-align: center;
+    transition: all 300ms;
+}
+#preview:hover {
+    background-color: #90EE90 !important;
+    color: #2c2c2c;
+}
+#save:hover {
+    background-color: #90EE90 !important;
+    color: #000;
 }
 .block {
     margin-bottom: 50px;

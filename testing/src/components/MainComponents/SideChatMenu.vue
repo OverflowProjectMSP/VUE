@@ -9,12 +9,14 @@ export default {
 
             isOpen: false,
 
-            chatImg: `src/assets/chatImg.png`
+            chatImg: `src/assets/messenger.png`,
+
+            nogoodMes: ``
         }
     },
     methods: {
         addMessage() {
-            if(this.message != ``) {
+            if(this.message != `` && this.message.length <= 250 && this.message != `Сообщение не может быть пустым, зайка)`) {
                 this.messages.push({
                     imgProfile: `src/assets/chatImg.png`,
                     username: `Аноним`,
@@ -24,8 +26,12 @@ export default {
                 if(this.messages.length > 4) {
                     this.messages.splice(0, 1);
                 }
+                this.nogoodMes = ``;
+            } else if(this.message.length > 250) {
+                this.nogoodMes = `Сообщение должно содержать менее 250 символов`;
             } else {
                 this.message = `Сообщение не может быть пустым, зайка)`;
+                this.nogoodMes = ``;
             }
         }
     }
@@ -37,26 +43,31 @@ export default {
         <div :class="{'d-none': isOpen}" class="icon-block" @click="this.isOpen = !this.isOpen">
             <img :src="chatImg" alt="Чат форума">
         </div>
-        <div class="chat-container bg-body-secondary p-3 rounded-4" :class="{'d-none': !isOpen}">
-            <h2 class="d-flex align-items-center gap-2">
-                <span @click="this.isOpen = !this.isOpen"><</span> 
-                Чат форума: </h2>
-            <hr>
-            <ul class="list-none d-flex flex-column align-items-start ps-0 gap-2">
-                <li class="d-flex flex-column bg-info p-2 rounded-3 flex-wrap w-fit" v-for="message in messages">
-                    <div class="profile-info d-flex flex-row align-items-center gap-2">
-                        <img class="border rounded-circle" :src="message.imgProfile" alt="Фото профиля">
-                        <b class="text-decoration-underline">{{ message.username }}</b>
+            <section>
+                <div class="chat-container horizontal a bg-body-secondary p-3 rounded-4" :class="{'d-none': !isOpen}" draggable='true'>
+                    <div class="trans-normal">
+                        <h2 class="d-flex align-items-center gap-2">
+                            <span @click="this.isOpen = !this.isOpen"><</span>
+                            Чат форума: </h2>
+                        <hr>
+                        <ul class="list-none d-flex flex-column align-items-start ps-0 gap-2">
+                            <li class="d-flex flex-column bg-info p-2 rounded-3 flex-wrap w-fit" v-for="message in messages">
+                                <div class="profile-info d-flex flex-row align-items-center gap-2">
+                                    <img class="border rounded-circle" :src="message.imgProfile" alt="Фото профиля">
+                                    <b class="text-decoration-underline">{{ message.username }}</b>
+                                </div>
+                                <span class="fs-5 mt-2 d-flex flex-wrap">{{ message.message }}</span>
+                            </li>
+                        </ul>
+                        <div class="down-block d-flex gap-3 align-items-center">
+                            <textarea v-model="message" class="form-control" row-1 placeholder="Введите ваше сообщение"></textarea>
+                            <button class="arrow-send border border-black rounded-circle p-2 fw-bold fs-4 d-flex align-items-center
+                            justify-content-center" @click="addMessage"> > </button>
+                        </div>
+                        <span v-if="this.nogoodMes != ``" class="text-danger">{{ nogoodMes }}</span>
                     </div>
-                    <span class="fs-5 mt-2 d-flex flex-wrap">{{ message.message }}</span>
-                </li>
-            </ul>
-            <div class="down-block d-flex gap-3 align-items-center">
-                <textarea v-model="message" class="form-control" row-1 placeholder="Введите ваше сообщение"></textarea>
-                <div class="arrow-send border border-black rounded-circle p-2 fw-bold fs-4 d-flex align-items-center 
-                justify-content-center" @click="addMessage"> > </div>
-            </div>
-        </div>
+                </div>
+            </section>
     </div>
 </template>
 
@@ -67,8 +78,15 @@ export default {
     right: 60px;
 }
 .chat-container {
-    max-width: 630px;
-    max-height: 630px;
+    max-width: 100%;
+    max-height: 90%;
+    resize: both;
+    overflow: hidden;
+    transform: scale(-1, -1);
+}
+.trans-normal {
+    transform: scale(-1, -1) !important;
+
 }
 .icon-block img {
     max-width: 70px;
@@ -83,7 +101,7 @@ h2 span:hover {
     opacity: 1;
 }
 .arrow-send {
-    width: 70px;
+    width: 80px;
     height: 65px;
     transition: all 250ms;
     cursor: pointer;

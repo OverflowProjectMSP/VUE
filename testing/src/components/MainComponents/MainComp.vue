@@ -25,8 +25,7 @@ export default {
   <page-end>
   </page-end>
 
-<ScrollBarComp />
-
+<scroll-bar-comp></scroll-bar-comp>
 </template>
 
 <style scoped>
