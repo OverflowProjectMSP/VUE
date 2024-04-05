@@ -9,7 +9,8 @@ export default createRouter({
 
     {
       path: "/Quetion",
-      component: () => import("../src/components/MainComponents/QuetionComp.vue"),
+      component: () =>
+        import("../src/components/MainComponents/QuetionComp.vue"),
     },
     {
       path: "/main",
@@ -29,7 +30,8 @@ export default createRouter({
     },
     {
       path: "/Registration",
-      component: () => import("./components/СomponetsForPages/RegisterPage.vue"),
+      component: () =>
+        import("./components/СomponetsForPages/RegisterPage.vue"),
     },
     {
       path: "/NewState",
@@ -42,6 +44,14 @@ export default createRouter({
     {
       path: "/Login",
       component: () => import("./components/СomponetsForPages/EnterPage.vue"),
+    },
+    {
+      path: "/Chat",
+      component: () => import("./components/MainComponents/SideChatMenu.vue"),
+    },
+    {
+      path: "/Profile",
+      component: () => import("./components/MainComponents/ProfileComp.vue"),
     },
   ],
 });
