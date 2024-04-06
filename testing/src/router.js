@@ -53,5 +53,13 @@ export default createRouter({
       path: "/Profile",
       component: () => import("./components/MainComponents/ProfileComp.vue"),
     },
+    {
+      path: "/ProfileSettings",
+      component: () => import("./components/СomponetsForPages/SettingsProfileComp.vue"),
+    },
+    {
+      path: "/Leaders",
+      component: () => import("./components/СomponetsForPages/ForumLeader.vue"),
+    },
   ],
 });

@@ -30,7 +30,7 @@ export default {
         margin: 5px;
     }
     .greetings {
-        border-radius: 7px;
+        border-radius: 0px;
         color: #fff;
         display: flex;
         flex-direction: column;

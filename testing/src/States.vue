@@ -66,9 +66,9 @@ export default {
         <img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span>
       </button>
       <ul class="dropdown-menu">
-        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
-        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
-        <li><a class="dropdown-item d-flex align-items-center" href="#"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
+        <li><a class="dropdown-item d-flex align-items-center" href="#/States"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
+        <li><a class="dropdown-item d-flex align-items-center" href="#/States"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
+        <li><a class="dropdown-item d-flex align-items-center" href="#/States"><img src="./assets/js.jpg" alt="" class="image"><span>JavaScript</span></a></li>
       </ul>
       </div>
       <!-- плюсик -->
@@ -136,8 +136,8 @@ h4{
     height: 30px;
     background-color: #e8e7ea;
     border-radius: 50%; 
-    border: 0.2px solid ; 
-    margin-left: 10px;
+    border: 0.0001px solid ; 
+    
     
    
 }

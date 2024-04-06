@@ -7,7 +7,7 @@
 
 <template>
     <div class="profile">
-                <img src="../../assets/sh.svg" alt="" class="il">
+               <a href="#/ProfileSettings"><img src="../../assets/sh.svg" alt="" class="il"></a>
                 <div class="head">
                     
                     <div class="circle t-alig-c"></div> 
@@ -89,6 +89,7 @@ body{
     right: 30px;
     height: 25px;
     width: 25px;
+    cursor: pointer;
 }
 
 /* аватар + ник */

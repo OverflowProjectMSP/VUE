@@ -55,7 +55,7 @@ export default {
                        
                       </li>
                       <li class="nav-item mt-1" style="cursor: pointer;">
-                        <a class="nav-link text-white" aria-disabled="true">Форум</a>
+                        <a class="nav-link text-white" aria-disabled="true" href="#/1">Форум</a>
                       </li>
                     </ul>
                     <div class="container-form">
@@ -85,7 +85,7 @@ margin-top: -20px;
 header{
     background-color: #3B82F6;
     width: auto;
-    border-radius: 0px 0px 5px 5px;
+    border-radius: 0px 0px 0px 0px;
 }
 
 
