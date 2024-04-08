@@ -2,8 +2,60 @@
 export default {
     data() {
         return {
+            langueges: ['TS', 'PHP', 'Python', 'JS', 'C#', 'Ruby', 'C++', 'Go', 'Java', 'Kotlin'],
+            stylesLang: ['ts', 'php', 'py',    'js', 'cs', 'ruby', 'cpp', 'go', 'ja',   'ko'],
 
+            index: 0,
+            index1: 1,
+            index2: 2,
+            index3: 3,
+            index4: 4,
+            index5: 5,
         }
+    },
+    methods: {
+        nextLang() {
+            this.index++;
+            this.index1++;
+            this.index2++;
+            this.index3++;
+            this.index4++;
+            this.index5++;
+            if(this.index == this.langueges.length) {
+                this.index = 0;
+            } else if(this.index1 == this.langueges.length) {
+                this.index1 = 0;
+            } else if(this.index2 == this.langueges.length) {
+                this.index2 = 0;
+            } else if(this.index3 == this.langueges.length) {
+                this.index3 = 0;
+            } else if(this.index4 == this.langueges.length) {
+                this.index4 = 0;
+            } else if(this.index5 == this.langueges.length) {
+                this.index5 = 0;
+            }
+        },
+        prevLang() {
+            this.index--;
+            this.index1--;
+            this.index2--;
+            this.index3--;
+            this.index4--;
+            this.index5--;
+            if (this.index < 0) {
+                this.index = this.langueges.length - 1;
+            } else if (this.index1 < 0) {
+                this.index1 = this.langueges.length - 1;
+            } else if (this.index2 < 0) {
+                this.index2 = this.langueges.length - 1;
+            } else if (this.index3 < 0) {
+                this.index3 = this.langueges.length - 1;
+            } else if (this.index4 < 0) {
+                this.index4 = this.langueges.length - 1;
+            } else if (this.index5 < 0) {
+                this.index5 = this.langueges.length - 1;
+            }
+        },
     }
 }
 </script>
@@ -13,16 +65,16 @@ export default {
         <hr>
         <p class="center-desc">Здесь вы можете задать вопросы по таким языкам <br> программирования как</p>
         <div class="languages">
-            <button class="btn-arrow leftarrow">&lt;</button>
+            <button @click="prevLang" class="btn-arrow leftarrow">&lt;</button>
             <div class="lang-items">
-                <div class="lang-item ts">TS</div>
-                <div class="lang-item php">PHP</div>
-                <div class="lang-item py">Python</div>
-                <div class="lang-item js">JS</div>
-                <div class="lang-item cs">C#</div>
-                <div class="lang-item ruby">Ruby</div>
+                    <div class="lang-item lang-item-col-1" :class="stylesLang[index] ">{{ langueges[index]  }}</div>
+                    <div class="lang-item lang-item-col-2" :class="stylesLang[index1]">{{ langueges[index1] }}</div>
+                    <div class="lang-item lang-item-col-3" :class="stylesLang[index2]">{{ langueges[index2] }}</div>
+                    <div class="lang-item lang-item-col-4" :class="stylesLang[index3]">{{ langueges[index3] }}</div>
+                    <div class="lang-item lang-item-col-5" :class="stylesLang[index4]">{{ langueges[index4] }}</div>
+                    <div class="lang-item lang-item-col-6" :class="stylesLang[index5]">{{ langueges[index5] }}</div>
             </div>
-            <button class="btn-arrow rightarrow">&gt;</button>
+            <button @click="nextLang" class="btn-arrow rightarrow">&gt;</button>
         </div>
         <div class="wehave">
             <p class="wehave-title">В данный момент на нашем сайте:</p>
@@ -91,12 +143,13 @@ export default {
         height: 60px;
         transition: 300ms;
         user-select: none;
+        cursor: pointer;
     }
     .lang-item:hover {
         transition: all 300ms;
         transform: scale(1.4);
     }
-    .ts {background-color: #017ACC; color: #fff; font-weight: 600;}
+    .ts {background-color: #017ACC; color: hsl(0, 0%, 100%); font-weight: 600;}
     .ts:hover {background-color: #005e9d;}
     .ts:active {background-color: #004877;}
     .php {background-color: #777BB3; color: #000; font-weight: 600;}
@@ -114,6 +167,18 @@ export default {
     .ruby {background-color: #A51501; color: #F08E74; font-weight: 600; -webkit-text-stroke: 0.5px black;}
     .ruby:hover {background-color: #800f00;}
     .ruby:active {background-color: #670c00;}
+    .go {background-color: #3be6e6; color: #000; font-weight: 600;}
+    .go:hover {background-color: #1fbebe;}
+    .go:active {background-color: #1bafaf;}
+    .cpp {background-color: #3b71e6; color: #fff; font-weight: 600;}
+    .cpp:hover {background-color: #2954b3;}
+    .cpp:active {background-color: #1e49a7;}
+    .ja {background-color: #c00909; color: #fff; font-weight: 600;}
+    .ja:hover {background-color: #990b0b;}
+    .ja:active {background-color: #7e0b0b;}
+    .ko {background-color: #9429eb; color: #fff; font-weight: 600;}
+    .ko:hover {background-color: #741dbb;}
+    .ko:active {background-color:#5e1997;}
     .btn-arrow {
         color: #646464;
         display: flex;
@@ -190,6 +255,9 @@ export default {
         .lang-items {
             gap: 10px
         }
+        .lang-item-col-5,.lang-item-col-6 {
+            display: none;
+        }
     }
     /* @media (max-width: 870px) {
         .pagecenter {
@@ -205,6 +273,9 @@ export default {
         .lang-items {
             flex-basis: 50%;
         }
+        .lang-item-col-3, .lang-item-col-4, .lang-item-col-5,.lang-item-col-6 {
+            display: none;
+        }
         
     }
     @media (max-width: 590px) {
@@ -215,6 +286,9 @@ export default {
     @media (max-width: 388px) {
         .languages {
             margin-bottom: 300px;
+        }
+        .lang-item-col-2, .lang-item-col-3, .lang-item-col-4, .lang-item-col-5,.lang-item-col-6 {
+            display: none;
         }
     }
 </style>

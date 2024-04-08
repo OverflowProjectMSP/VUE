@@ -83,7 +83,7 @@ export default {
 
 <!-- Див с виджетами -->
 <div class="con mt-3">
-<vid-comp :item="item"  v-for="item in items"/>
+<vid-comp :item="item"  v-for="item in items" role="button"/>
 </div>
 
 

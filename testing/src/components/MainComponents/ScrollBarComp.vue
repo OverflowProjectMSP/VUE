@@ -46,7 +46,7 @@ export default {
                 {
                     name: `nikit0_17`,
                     role: `Главный дизайнер`,
-                    imageProfileDS: `russia_top_1.png`
+                    imageProfileDS: `disainerImg.png`
                 },
             ],
             index: 0,

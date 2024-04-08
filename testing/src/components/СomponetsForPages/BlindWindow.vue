@@ -18,13 +18,21 @@ export default {
     <div class="modal-backdrop">
     <div class="window">
         <p>{{ title }}</p>
-        <button @click="Close">Ладно...</button>
+        <button @click="Close">
+            <a target="_blank" href="https://goo.su/dcwGs">
+            Ладно...
+            </a>
+    </button>
     </div>
     </div>
     </transition>
 </template>
 
 <style scoped>
+a{
+    text-decoration: none;
+    color: #fff;
+}
 .window {
     width: 500px;
     height: 300px;
