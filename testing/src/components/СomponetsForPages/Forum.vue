@@ -21,26 +21,27 @@ export default {
                     Decided: false,
                 },
                 
-            ]
+            ],
+                plusImg: 'src/assets/plus.svg',
         }
     }
 }
 </script>
 
 <template>
-    <div class="contant-head">
+    <div class="contant-head mt-3">
         <div class="container-one">
             <div class="name-and-image">
-                <img class="forum-image" src="../assets/jsicon.png" alt="">
+                <img class="forum-image" :src="'src/assets/js.jpg'" alt="">
                 <p>JavaScript</p>
             </div>
-            <button class="create-post"><img class="plus-icon" src="../assets/plus.svg" alt="">Создать пост</button>
+            <button class="create-post"><img class="plus-icon" :src="plusImg" alt="">Создать пост</button>
         </div>
     </div>
     <div class="contant-post">
         <div class="sort-and-search">
             <div class="cont-search">
-                <img width="30" src="../assets/search.svg" alt=""><input class="search" type="search">
+                <img width="30" :src="'src/assets/search.svg'" alt=""><input class="search" type="search">
             </div>
             <select class="sort-select form-select" name="sort" id="sort">
                 <option value="0">Сортировать</option>
@@ -60,7 +61,7 @@ export default {
                     <p class="description">{{ post.description }}</p>
                 </div>
                 <div class="decided" v-if="post.Decided">
-                    <div class="decid"><img width="60" class="decided-img"src="../assets/decided.svg" alt=""><span class="hover-hidden">Вопрос решён</span></div>
+                    <div class="decid"><img width="60" class="decided-img" :src="'src/assets/decided.svg'" alt=""><span class="hover-hidden">Вопрос решён</span></div>
                 </div>
             </div>
             <div class="answer">
@@ -138,6 +139,7 @@ export default {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis; */
+        margin: 0 !important;
     }
 
     .create-post:hover {
@@ -207,8 +209,7 @@ export default {
     }
 
     .post {
-        /* width: 100%; */
-        height: 400px;
+        width: 100%;
         /* border: 2px solid #1d1d1d; */
         border-radius: 20px;
 
@@ -218,7 +219,7 @@ export default {
         
 
         padding: 10px;
-        margin-bottom: 30px;
+        margin-bottom: 25px !important;
 
         /* background-color: #cdcdcd */
     }
@@ -245,6 +246,7 @@ export default {
     }
 
     .main-post-and-check {
+        width: 100%;
         display: flex;
         align-items: center;
         gap: 60px;
@@ -253,7 +255,6 @@ export default {
     .main-post {
         margin-top: 20px;
         width: 90%;
-        height: 200px;
         padding: 10px;
 
         border: 1px solid #1d1d1d;
@@ -311,6 +312,7 @@ export default {
     .decid {
         position: relative;
         display: inline-block;
+        cursor: pointer;
     }
     
     .decid .hover-hidden {
@@ -346,20 +348,26 @@ export default {
         opacity: 1;
     }
 
-    @media (max-width: 1100px) {
-        .main-post {
-            height: 400px;
-        }
-        .post {
-            height: 600px
+    @media ((min-width: 100px) and (max-width: 600px)) {
+        .title {
+            text-align: start;
         }
     }
 
     @media (max-width: 700px) {
+        
         .container-one {
             flex-direction: column;
             align-items: start;
             gap: 30px;
+            margin-bottom: 80px;
+        }
+        .sort-and-search {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            margin-bottom: 70px;
         }
     }
 
@@ -375,5 +383,24 @@ export default {
             width: clamp(300px, 100%, 600ch);
         }
     }
+
+    @media (max-width: 549px) {
+        .main-post-and-check {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: start;
+
+            margin-bottom: 20px;
+        }
+        .description {
+            width: clamp(200px, 100%, 600ch);
+        }
+        .title {
+            font-size: 23px !important;
+            text-align: left;
+        }
+    }
+
     
 </style>

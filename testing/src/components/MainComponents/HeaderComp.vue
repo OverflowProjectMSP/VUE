@@ -183,7 +183,6 @@ li {
 
 }
 .navbar-toggler-icon {
-  border: 0.0001px solid rgba(4, 18, 21, 0.548);
   border-radius: 10px;
   width: 50px;
   height: 50px;
