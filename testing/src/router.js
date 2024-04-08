@@ -61,5 +61,13 @@ export default createRouter({
       path: "/Leaders",
       component: () => import("./components/СomponetsForPages/ForumLeader.vue"),
     },
+    {
+      path: "/Forum",
+      component: () => import("./components/СomponetsForPages/Forum.vue"),
+    },
+    {
+      path: "/FAQ",
+      component: () => import("./components/СomponetsForPages/FAQ.vue"),
+    },
   ],
 });

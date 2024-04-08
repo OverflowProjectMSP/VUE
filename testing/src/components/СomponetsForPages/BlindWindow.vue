@@ -19,7 +19,7 @@ export default {
     <div class="window">
         <p>{{ title }}</p>
         <button @click="Close">
-            <a target="_blank" href="https://goo.su/dcwGs">
+            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
             Ладно...
             </a>
     </button>

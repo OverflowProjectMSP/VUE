@@ -190,6 +190,7 @@ export default {
         background: none;
         border: none;
         transition: 100ms;
+        user-select: none
     }
     .btn-arrow:hover {
         color: #363636;

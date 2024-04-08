@@ -1,10 +1,4 @@
 <script>
-
-let elList = document.querySelectorAll(`.el`);
-for (let i = 0; i < elList.length; i++) {
-    let el = elList[i];
-    el.classList.add(`t-alig-c`);
-}
 export default {
     data() {
         return {
@@ -150,6 +144,7 @@ export default {
 .el{
     border-right: 1px solid #AEB8BC;
     padding: 7px;
+    text-align: center;
 }
 .el-d{
     border-right: none;

@@ -148,6 +148,7 @@ export default {
         </div>
         <div class="footer-container pt-5 p-4 bg-primary w-100 h-100 d-flex flex-column align-items-center text-white">
             <h4>UpFollow</h4>
+            <span><a class="text-white text-muted" href="#/FAQ">FAQ</a></span>
         </div>
 
 </template>
