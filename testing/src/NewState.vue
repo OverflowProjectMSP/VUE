@@ -8,120 +8,118 @@ export default {
 </script>
 
 <template>
-    <head-comp/>
+    <head-comp />
     <div class="title">
-            <h2>
-                Новая статья 
-            </h2>
+        <h2>
+            Новая статья
+        </h2>
     </div>
-        <hr>
+    <hr>
     <div class="name">
-            <h4>
-                Название статьи
-            </h4>
-            <p class="transparent">
-                Сформулируйте название так, чтобы сразу было понятно, о чём речь.
-            </p>
+        <h4>
+            Название статьи
+        </h4>
+        <p class="transparent">
+            Сформулируйте название так, чтобы сразу было понятно, о чём речь.
+        </p>
         <form>
             <input type="email" class="form-control" id="inputlg">
         </form>
     </div>
-        <div class="text">
-            <h4>
-                Текст статьи 
-            </h4>
-            <p class="transparent">
-                Делайте что хотите, в ваших руках все инструменты!
-            </p>
-    <div class="string">
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <button type="button" class="btn btn-secondary"><b>B</b></button>
-            <button type="button" class="btn btn-secondary"><i>i</i></button>
-            <button type="button" class="btn btn-secondary">&#9939;</button>
-            <button type="button" class="btn btn-secondary"><i><></i></button>
-            <button type="button" class="btn btn-secondary"><i>...</i></button>
-            <button type="button" class="btn btn-secondary">&#11015; <b>Добавить файл</b></button>
-            <button type="button" class="btn btn-secondary">&#11014; <b>Добавить фото</b></button>
+    <div class="text">
+        <h4>
+            Текст статьи
+        </h4>
+        <p class="transparent">
+            Делайте что хотите, в ваших руках все инструменты!
+        </p>
+        <div class="string">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="btn btn-secondary"><b>B</b></button>
+                <button type="button" class="btn btn-secondary"><i>i</i></button>
+                <button type="button" class="btn btn-secondary">&#9939;</button>
+                <button type="button" class="btn btn-secondary"><i>
+                        <>
+                    </i></button>
+                <button type="button" class="btn btn-secondary"><i>...</i></button>
+                <button type="button" class="btn btn-secondary">&#11015; <b>Добавить файл</b></button>
+                <button type="button" class="btn btn-secondary">&#11014; <b>Добавить фото</b></button>
+            </div>
+            <div class="forms">
+                <div class="form1">
+                    <select class="form-select" style="border-color: #B3B3B3;" aria-label="Default select example">
+                        <option selected class="main">Простой</option>
+                        <option value="1" class="first">Средний</option>
+                        <option value="2" class="second">Сложный</option>
+                    </select>
+                </div>
+                <div class="form2">
+                    <select class="form-select" style="border-color: #B3B3  3;" aria-label="Default select example">
+                        <option selected class="python"><b>Python</b></option>
+                        <option value="1" class="js"><b>JS</b></option>
+                        <option value="2" class="php"><b>PHP</b></option>
+                    </select>
+                </div>
+            </div>
         </div>
-    <div class="forms">
-        <div class="form1">
-            <select class="form-select" style="border-color: #B3B3B3;" aria-label="Default select example">
-                <option selected class="main">Простой</option>
-                <option value="1" class="first">Средний</option>
-                <option value="2" class="second">Сложный</option>
-            </select>
-        </div>
-        <div class="form2">
-            <select class="form-select" style="border-color: #B3B3  3;" aria-label="Default select example">
-                <option selected class="python"><b>Python</b></option>
-                <option value="1" class="js"><b>JS</b></option>
-                <option value="2" class="php"><b>PHP</b></option>
-            </select>
-        </div>
-    </div>
-</div>
         <div class="form-floating">
-            <textarea class="form-control" id="formchik"  style="border-color: #B3B3B3;"></textarea>
+            <textarea class="form-control" id="formchik" style="border-color: #B3B3B3;"></textarea>
         </div>
-     
-</div>
+
+    </div>
 
 
 
-<div class="row pt-5 block">
-                    <div class="col-6">
-                        <button id="save"><b>Опубликовать</b></button>
-                    </div>
-                    <div class="col-6">
-                        <button id="preview"><b>Предпосмотр</b></button>
-                    </div>
-            </div>
-
-<div class="preview-container" v-if="true">
-
-
-
-
-    <div class="container">
-                <div class="vid" v-if="Vid">
-        <div class="left">
-            <div class="top-1">
-                <div class="name"><p><img src="" alt="" class="t">{{ language }}</p></div>
-                <div class="id middle"><p><img src="" alt="" class="t">{{ sloz }}</p></div>
-            </div>
-            <div class="mid-1">
-                <p>{{Input}}</p>
-            </div>
-            <div class="bottom-1">
-                <div class="el">0 подписчика</div>
-                <div class="el">0 часов назад</div>
-                <div class="el -d">0 просмотра</div>
-            </div>
+    <div class="row pt-5 block">
+        <div class="col-6">
+            <button id="save"><b>Опубликовать</b></button>
         </div>
-        <div class="right">
-            <div class="right-in">
-                <p class="t-alig-c">0</p>
-                <p>Ответов</p>
-            </div>
+        <div class="col-6">
+            <button id="preview"><b>Предпосмотр</b></button>
         </div>
     </div>
 
+    <div class="preview-container" v-if="true">
+
+
+
+
+        <div class="container">
+            <div class="vid" v-if="Vid">
+                <div class="left">
+                    <div class="top-1">
+                        <div class="name">
+                            <p><img src="" alt="" class="t">{{ language }}</p>
+                        </div>
+                        <div class="id middle">
+                            <p><img src="" alt="" class="t">{{ sloz }}</p>
+                        </div>
+                    </div>
+                    <div class="mid-1">
+                        <p>{{ Input }}</p>
+                    </div>
+                    <div class="bottom-1">
+                        <div class="el">0 подписчика</div>
+                        <div class="el">0 часов назад</div>
+                        <div class="el -d">0 просмотра</div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="right-in">
+                        <p class="t-alig-c">0</p>
+                        <p>Ответов</p>
+                    </div>
+                </div>
             </div>
-            </div>
+
         </div>
-
-
-
-
-
-
-
-</div>
+    </div>
+    
 </template>
 
 <style scoped>
 /* стили кнопок */
-#save{
+#save {
     background-color: rgb(255, 255, 255);
     color: #7ac97a;
     border-color: #90EE90;
@@ -131,7 +129,8 @@ export default {
     text-align: center;
     margin-left: 30px;
 }
-#preview{
+
+#preview {
     background-color: rgb(255, 255, 255);
     color: #7ac97a;
     border-color: #90EE90;
@@ -140,6 +139,7 @@ export default {
     padding-left: 15px;
     text-align: center;
 }
+
 .block {
     margin-bottom: 10px;
 }
@@ -148,6 +148,7 @@ export default {
 
 /* 1. Стили для шрифта и общего оформления страницы */
 @import url('https://fonts.cdnfonts.com/css/rubik');
+
 html {
     margin: 0;
     background-color: #EEF1F4;
@@ -155,9 +156,11 @@ html {
     width: 100%;
     height: 100%;
 }
+
 main {
     margin: 10px;
 }
+
 body {
     font-family: Rubik !important;
 }
@@ -169,13 +172,16 @@ body {
     margin-top: 20px;
     margin-left: 37px;
 }
+
 hr {
     width: 95%;
     margin: 20px 35px 0 25px;
 }
+
 .name h4 {
     margin: 20px 35px 0px;
 }
+
 .transparent {
     color: #B3B3B3;
     margin: 7px 36px 0px;
@@ -191,9 +197,11 @@ hr {
     border-color: #B3B3B3;
     width: calc(100% - 70px);
 }
+
 .text h4 {
     margin: 20px 35px 0px;
 }
+
 .btn-secondary {
     background-color: white;
     color: black;
@@ -209,12 +217,15 @@ hr {
     align-items: center;
     margin-left: 35px;
 }
+
 .main {
     color: green;
 }
+
 .first {
     color: orange;
 }
+
 .second {
     color: red;
 }
@@ -223,37 +234,44 @@ hr {
 #inputlg {
     width: 80%;
 }
+
 #formchik {
     margin: 20px 35px 0px;
-    border-radius: 7px; 
+    border-radius: 7px;
     height: 400px;
 }
+
 .btn-wrapper button {
     font-size: 25px;
     margin: 20px 35px 0px;
     border-radius: 10px;
     display: flex;
 }
+
 .btn-wrapper {
     display: flex;
     flex-direction: row;
 }
+
 .btn-dark {
     border-color: #B3B3B3;
     color: #B3B3B3;
     background-color: white;
 }
+
 .btn-dark:hover {
     border-color: #B3B3B3;
     color: white;
     background-color: gray;
     transition: 0.2s;
 }
+
 .btn-dark:active {
     border-color: #B3B3B3;
     color: white;
     background-color: #565656;
 }
+
 .btn-success:active {
     color: white;
     background-color: #074B2A;
@@ -274,7 +292,9 @@ hr {
 .form-control {
     width: 95%;
 }
-.form1, .form2 {
+
+.form1,
+.form2 {
     width: 75%;
     margin-right: 40px;
 }
@@ -406,8 +426,8 @@ hr {
         width: 90%;
     }
 
-    
-    .btn-group .btn  {
+
+    .btn-group .btn {
         margin-left: 40px;
         font-size: 15px;
         padding: 10px 4%;
@@ -439,6 +459,7 @@ hr {
         font-size: 15px;
         padding: 7px 6%;
     }
+
     .forms {
         margin-top: -81.5px;
         gap: 5px;
@@ -509,7 +530,7 @@ hr {
     #inputlg {
         width: 90%;
     }
-    
+
     .forms {
         gap: 1px;
         flex-direction: row;
@@ -526,13 +547,13 @@ hr {
 }
 
 
-    /* @media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
         .btn {
             padding: 8px 16px;
             font-size: 14px;
         }
     } */
-    /* @media only screen and (max-width: 1850px) {
+/* @media only screen and (max-width: 1850px) {
         .forms {
             flex-direction: column;
             gap: 20px;
@@ -542,6 +563,4 @@ hr {
         }
 
     } */
-
-
 </style>

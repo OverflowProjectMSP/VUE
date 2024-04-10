@@ -8,14 +8,14 @@ for (let i = 0; i < elList.length; i++) {
 export default {
     data() {
         return {
-            
-    }
-   
-},
+
+        }
+
+    },
     props: {
         item: Object,
         Show: Boolean,
-}
+    }
 
 }
 </script>
@@ -24,11 +24,15 @@ export default {
     <div class="vid">
         <div class="left">
             <div class="top-1">
-                <div class="name"><p><img src="" alt="" class="t">{{item.language}}</p></div>
-                <div class="id middle"><p><img src="" alt="" class="t">{{item.complexity}}</p></div>
+                <div class="name">
+                    <p><img src="" alt="" class="t">{{ item.language }}</p>
+                </div>
+                <div class="id middle">
+                    <p><img src="" alt="" class="t">{{ item.complexity }}</p>
+                </div>
             </div>
             <div class="mid-1">
-                <p class="name-limit">{{item.title}}</p>
+                <p class="name-limit">{{ item.title }}</p>
             </div>
             <div class="bottom-1">
                 <div class="el">{{ item.sub }} подписчика(ов)</div>
@@ -46,44 +50,49 @@ export default {
 </template>
 
 <style>
-:root{
+:root {
     --size-20: 20px;
     --size-26: 26px;
     --size-22: 22px;
     --size-18: 18px;
 }
-.t-alig-c{
+
+.t-alig-c {
     text-align: center;
 }
+
 /* виджет с вопросами */
 .left {
     display: flex;
     flex-direction: column;
 }
 
-.vid{
-    background-color:#EEF1F4 ;
+.vid {
+    background-color: #EEF1F4;
     padding: 10px;
     display: flex;
     justify-content: space-between;
     border-radius: 15px;
     margin-bottom: 10px;
-    margin:0 20% 15px 20%;
+    margin: 0 20% 15px 20%;
 }
+
 .vid:last-child {
     margin-bottom: 0;
 }
 
 /* общее расположение элементов */
 
-.right{
+.right {
     display: flex;
     align-items: center;
 }
-.right-in{
+
+.right-in {
     display: flexbox;
 }
-.right p{
+
+.right p {
     margin: 0;
     margin: 0;
     color: #AEB8BC;
@@ -92,34 +101,41 @@ export default {
     font-weight: 500;
     line-height: normal;
 }
+
 /* расцветовка */
-.light{
-    color:#488D57
+.light {
+    color: #488D57
 }
-.middle{
+
+.middle {
     color: #D8A326;
 }
-.hard{
-      color: #D9382E;
+
+.hard {
+    color: #D9382E;
 }
+
 /* левая чать виджета */
 
 /* Верх */
-.top-1{
+.top-1 {
     display: flex;
     gap: 20px;
-    margin-bottom:10px ;
+    margin-bottom: 10px;
 }
-.top-1 p{
+
+.top-1 p {
     margin: 0;
 }
-.t{
+
+.t {
     vertical-align: middle;
     width: 10px;
     height: 10px;
 }
+
 /* серидина */
-.mid-1{
+.mid-1 {
     display: flex;
     flex-wrap: wrap;
 
@@ -130,7 +146,8 @@ export default {
     white-space: nowrap;
     display: inline-block;
 }
-.mid-1 p{
+
+.mid-1 p {
     margin: 0;
     text-wrap: wrap;
 }
@@ -141,24 +158,29 @@ export default {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 /* низ */
-.bottom-1{
+.bottom-1 {
     display: flex;
     font-size: 15px;
     color: #AEB8BC;
 }
-.el{
+
+.el {
     border-right: 1px solid #AEB8BC;
     padding: 7px;
 }
-.el-d{
+
+.el-d {
     border-right: none;
     padding: 7px;
 }
+
 .-d {
     border-right: none;
 }
-.el p{
+
+.el p {
     margin: 0;
 }
 
@@ -167,7 +189,7 @@ export default {
 div.vid {
     transition: all 0.5s;
 }
-  
+
 div.vid:hover {
     transform: translateY(-10px);
     box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.5);
@@ -184,77 +206,92 @@ div.vid:hover {
         display: inline-block;
         text-overflow: ellipsis;
     }
+
     .mid-1 {
         width: 85%;
     }
+
     .left {
         width: 75%;
     }
 }
 
-@media(max-width: 1200px){
-    .q{
+@media(max-width: 1200px) {
+    .q {
         font-size: var(--size-20);
     }
 }
-@media(max-width: 992px){
-    .q{
+
+@media(max-width: 992px) {
+    .q {
         font-size: var(--size-18);
     }
-    .quest{
+
+    .quest {
         margin: 0 15%;
     }
-    .mid-1 p{
+
+    .mid-1 p {
         font-size: 24px;
     }
-    
+
 }
 
 @media(max-width: 910px) {
     .name-limit {
         width: 17ch;
     }
-    
+
 }
 
-@media(max-width: 576px){
-    .q{
+@media(max-width: 576px) {
+    .q {
         font-size: var(--size-18);
     }
-    .quest{
+
+    .quest {
         margin: 0 15%;
     }
-    .mid-1 p{
+
+    .mid-1 p {
         font-size: var(--size-20);
     }
-    .bottom-1{
+
+    .bottom-1 {
         font-size: 13px;
     }
-    .right p{
+
+    .right p {
         font-size: var(--size-18);
     }
-    .imp-1{
+
+    .imp-1 {
         padding-top: 13px;
     }
 }
 
-@media(max-width: 768px){
-    .q{
+@media(max-width: 768px) {
+    .q {
         font-size: var(--size-18);
     }
-    .quest{
+
+    .quest {
         margin: 0 15%;
     }
-    .mid-1 p{
+
+    .mid-1 p {
         font-size: var(--size-20);
     }
-    .bottom-1{
+
+    .bottom-1 {
         font-size: 13px;
     }
-    .right p{
+
+    .right p {
         font-size: var(--size-18);
     }
-    .imp-1{
+
+    .imp-1 {
         padding-top: 13px;
     }
 }
@@ -276,16 +313,15 @@ div.vid:hover {
     .bottom-1 {
         flex-direction: column;
     }
+
     .el {
         width: 100px;
         border-right: none;
         border-bottom: 1px solid #AEB8BC;
     }
+
     .el:last-child {
         margin-bottom: 10px;
     }
 }
-
-
-
 </style>

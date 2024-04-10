@@ -13,26 +13,27 @@ export default {
 </script>
 
 <template>
-    <transition name="modal-fade" >
+    <transition name="modal-fade">
 
-    <div class="modal-backdrop">
-    <div class="window">
-        <p>{{ title }}</p>
-        <button @click="Close">
-            <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
-            Ладно...
-            </a>
-    </button>
-    </div>
-    </div>
+        <div class="modal-backdrop">
+            <div class="window">
+                <p>{{ title }}</p>
+                <button @click="Close">
+                    <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">
+                        Ладно...
+                    </a>
+                </button>
+            </div>
+        </div>
     </transition>
 </template>
 
 <style scoped>
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
+
 .window {
     width: 500px;
     height: 300px;
@@ -84,8 +85,8 @@ button:hover {
 button:active {
     background-color: #240088;
 }
-.modal-backdrop 
-    {
+
+.modal-backdrop {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -95,5 +96,5 @@ button:active {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 </style>

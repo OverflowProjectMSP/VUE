@@ -95,12 +95,15 @@ export default {
 ol li:nth-child(1) {
     background-color: #a0cbff !important;
 }
+
 ol li:nth-child(2) {
     background-color: #BFDBFE !important;
 }
+
 ol li:nth-child(3) {
     background-color: #dbebff !important;
 }
+
 h2 {
     margin-bottom: 0 !important;
 }

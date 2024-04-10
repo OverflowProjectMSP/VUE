@@ -15,33 +15,32 @@ export default {
 
 <template>
     <div class="modal-backdrop">
-    <div class="window">
-        <div class="close">
-            <button class="btn-close" @click="CloseModal">X</button>
-        </div>
-        <h3>Что вы хотите сделать?</h3>
-        <div class="buttons">
-            <form action="#/NewState">
-                <button class="btn" href="#/Main">Создать статью</button>
-            </form>
-            <form action="#/Quetion">
-                <button class="btn">Создать вопрос</button>
-            </form>
+        <div class="window">
+            <div class="close">
+                <button class="btn-close" @click="CloseModal">X</button>
+            </div>
+            <h3>Что вы хотите сделать?</h3>
+            <div class="buttons">
+                <form action="#/NewState">
+                    <button class="btn" href="#/Main">Создать статью</button>
+                </form>
+                <form action="#/Quetion">
+                    <button class="btn">Создать вопрос</button>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 
 </template>
 
 <style scoped>
-
 .window {
     background-color: #ffffff;
     border: 4px solid #2a2a2a;
     width: 500px;
     height: 300px;
     border-radius: 30px;
-    
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,8 +118,8 @@ export default {
 
     cursor: pointer;
 }
-.modal-backdrop 
-    {
+
+.modal-backdrop {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -130,5 +129,5 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
 </style>

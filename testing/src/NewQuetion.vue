@@ -3,12 +3,12 @@ import FooterComp from './components/MainComponents/FooterComp.vue';
 import HeaderComp from "./components/MainComponents/HeaderComp.vue";
 import QuetionComp from "./components/MainComponents/QuetionComp.vue";
 
-export default{
+export default {
     components: {
         HeaderComp,
         QuetionComp,
         FooterComp,
-        
+
     },
 
     data() {
@@ -22,23 +22,23 @@ export default{
             greenlabel: true,
             color: `green`,
             language: ``
-            
+
         }
     },
-        methods: {
-          
-        }
+    methods: {
+
     }
+}
 
 </script>
 <template>
-    <HeaderComp/>
+    <HeaderComp />
     <router-view></router-view>
-   
-  
+
+
 </template>
 <style scoped>
-#save{
+#save {
     background-color: rgb(255, 255, 255);
     color: #7ac97a;
     border-color: #90EE90;
@@ -47,7 +47,8 @@ export default{
     padding-left: 15px;
     text-align: center;
 }
-#preview{
+
+#preview {
     background-color: rgb(255, 255, 255);
     color: #7ac97a;
     border-color: #90EE90;
@@ -56,15 +57,17 @@ export default{
     padding-left: 15px;
     text-align: center;
 }
+
 .block {
     margin-bottom: 50px;
 }
 
 /* стили лейбла */
 
- .green{
+.green {
     color: green;
 }
+
 .red {
     color: red;
 }
@@ -72,18 +75,20 @@ export default{
 
 /* тут стили виджета */
 
-:root{
+:root {
     --size-20: 20px;
     --size-26: 26px;
     --size-22: 22px;
     --size-18: 18px;
 }
-.t-alig-c{
+
+.t-alig-c {
     text-align: center;
 }
+
 /* виджет с вопросами */
-.vid{
-    background-color:#EEF1F4 ;
+.vid {
+    background-color: #EEF1F4;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -94,14 +99,16 @@ export default{
 
 /* общее расположение элементов */
 
-.right{
+.right {
     display: flex;
     align-items: center;
 }
-.right-in{
+
+.right-in {
     display: flexbox;
 }
-.right p{
+
+.right p {
     margin: 0;
     margin: 0;
     color: #AEB8BC;
@@ -110,57 +117,70 @@ export default{
     font-weight: 500;
     line-height: normal;
 }
+
 /* расцветовка */
-.light{
-    color:#488D57
+.light {
+    color: #488D57
 }
-.middle{
+
+.middle {
     color: #D8A326;
 }
-.hard{
-      color: #D9382E;
+
+.hard {
+    color: #D9382E;
 }
+
 /* левая чать виджета */
 
 /* Верх */
-.top-1{
+.top-1 {
     display: flex;
     gap: 20px;
-    margin-bottom:10px ;
+    margin-bottom: 10px;
 }
-.top-1 p{
+
+.top-1 p {
     margin: 0;
 }
-.t{
+
+.t {
     vertical-align: middle;
     width: 10px;
     height: 10px;
 }
+
 /* серидина */
-.mid-1{
+.mid-1 {
     font-size: 28px;
 }
-.mid-1 p{
+
+.mid-1 p {
     margin: 0;
 }
+
 /* низ */
-.bottom-1{
+.bottom-1 {
     display: flex;
     font-size: 15px;
     color: #AEB8BC;
 }
-.el{
+
+.el {
     border-right: 1px solid #AEB8BC;
     padding: 7px;
 }
-.el-d{
+
+.el-d {
     border-right: none;
     padding: 7px;
 }
+
 .-d {
     border-right: none;
 }
-.el p{
+
+.el p {
     margin: 0;
 }
 
@@ -169,72 +189,83 @@ export default{
 div.vid {
     transition: all 0.5s;
 }
-  
+
 div.vid:hover {
     transform: translateY(-10px);
     box-shadow: 10px 5px 5px rgb(0, 0, 0, 0.5);
 }
 
 /* Адаптивка */
-@media(max-width: 1200px){
-    .q{
+@media(max-width: 1200px) {
+    .q {
         font-size: var(--size-20);
     }
 }
-@media(max-width: 992px){
-    .q{
+
+@media(max-width: 992px) {
+    .q {
         font-size: var(--size-18);
     }
-    .quest{
+
+    .quest {
         margin: 0 15%;
     }
-    .mid-1 p{
+
+    .mid-1 p {
         font-size: 24px;
     }
-    
+
 }
 
-@media(max-width: 576px){
-    .q{
+@media(max-width: 576px) {
+    .q {
         font-size: var(--size-18);
     }
-    .quest{
+
+    .quest {
         margin: 0 15%;
     }
-    .mid-1 p{
+
+    .mid-1 p {
         font-size: var(--size-20);
     }
-    .bottom-1{
+
+    .bottom-1 {
         font-size: 13px;
     }
-    .right p{
+
+    .right p {
         font-size: var(--size-18);
     }
-    .imp-1{
+
+    .imp-1 {
         padding-top: 13px;
     }
 }
 
-@media(max-width: 768px){
-    .q{
+@media(max-width: 768px) {
+    .q {
         font-size: var(--size-18);
     }
-    .quest{
+
+    .quest {
         margin: 0 15%;
     }
-    .mid-1 p{
+
+    .mid-1 p {
         font-size: var(--size-20);
     }
-    .bottom-1{
+
+    .bottom-1 {
         font-size: 13px;
     }
-    .right p{
+
+    .right p {
         font-size: var(--size-18);
     }
-    .imp-1{
+
+    .imp-1 {
         padding-top: 13px;
     }
 }
-
-
 </style>

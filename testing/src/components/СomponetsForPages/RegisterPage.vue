@@ -23,7 +23,7 @@ export default {
             if (this.nickname === ``) {
                 this.error = '*Вы не ввели никнейм*'
             }
-            else  if (this.email === '') {
+            else if (this.email === '') {
                 this.error = '*Вы не ввели Email*'
             } else if (this.password === '') {
                 this.error = '*Вы не ввели пароль*'
@@ -31,7 +31,7 @@ export default {
                 this.error = '*Вы не повторили пароль*'
             } else if (this.password.length <= 9) {
                 this.error = '*Пароль должен включать 8 символов*'
-            } else if (!this.password.includes('*') ) {
+            } else if (!this.password.includes('*')) {
                 this.error = '*Пароль должен включать спец символ*'
             } else if (this.password !== this.exPassword) {
                 this.error = '*Пароли не совпадают'
@@ -39,8 +39,8 @@ export default {
             else {
                 this.error = ''
             }
-            
-            
+
+
             if (this.password !== this.exPassword) {
                 this.error = '*Пароли не совпадают'
             }
@@ -69,7 +69,7 @@ export default {
                 this.eyeImg2 = '/src/assets/eye.svg'
             }
         },
-        
+
     }
 }
 
@@ -79,14 +79,17 @@ export default {
     <div class="container">
         <h1>Регистрация</h1>
         <form action="#!">
-            <input class="form-item form-item-1" v-model="nickname" placeholder="Введите никнейм" type="email"  name="" id="">
-            <input class="form-item form-item-1" v-model="email" placeholder="Email" type="email"  name="" id="">
+            <input class="form-item form-item-1" v-model="nickname" placeholder="Введите никнейм" type="email" name=""
+                id="">
+            <input class="form-item form-item-1" v-model="email" placeholder="Email" type="email" name="" id="">
             <div class="password">
-                <input class="form-item form-item-2" :type="showPassword" v-model="password" placeholder="Пароль" type="password" name="password" id="password-input">
+                <input class="form-item form-item-2" :type="showPassword" v-model="password" placeholder="Пароль"
+                    type="password" name="password" id="password-input">
                 <img @click="toggleVisibility1" class="password-show" :src="eyeImg1" alt="">
             </div>
             <div class="exPassword">
-                <input class="form-item form-item-3" :type="showExPassword" v-model="exPassword" placeholder="Повторите пароль" type="password" name="exPassword" id="exPassword-input">
+                <input class="form-item form-item-3" :type="showExPassword" v-model="exPassword"
+                    placeholder="Повторите пароль" type="password" name="exPassword" id="exPassword-input">
                 <img @click="toggleVisibility2" class="exPassword-show" :src="eyeImg2" alt="">
             </div>
         </form>

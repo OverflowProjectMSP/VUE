@@ -12,57 +12,63 @@ export default {
     components: {
         HeaderComp,
         VidComp,
-        FooterComp, 
+        FooterComp,
         HeadComp,
-        UserInfo, 
+        UserInfo,
         hours,
         ModelWindowVue,
     },
-    data(){
-        return{ pass} // А где Олег???
+    data() {
+        return { pass } // А где Олег???
     },
     methods: { pass }
 }
 
 </script>
-<!-- Вызываем компонент --> 
+<!-- Вызываем компонент -->
 <template>
-<router-link/>
+    <router-link />
 
-<header-comp/>
-<footer-comp/>
+    <header-comp />
+    <footer-comp />
 
 </template>
 <!-- npm run dev прописывай в папке testing -->
 <style scoped>
 @import url('https://fonts.cdnfonts.com/css/rubik');
-html{
+
+html {
     margin: 0;
     background-color: #EEF1F4;
 }
-main{
+
+main {
     margin: 10px;
-    
+
 }
-template{
+
+template {
     font-family: Rubik !important;
-    
+
 }
 
 
 
-.t-alig-c{
+.t-alig-c {
     text-align: center;
 }
+
 .head {
     margin-top: 20px;
 }
-.ttt{
+
+.ttt {
     user-select: none;
     pointer-events: none;
     opacity: 0.7;
 
 }
+
 /* модальное окно */
 .window {
     background-color: #ffffff;
@@ -78,14 +84,14 @@ template{
     gap: 50px;
     z-index: 1;
     font-family: "Rubik", sans-serif;
-   
+
     top: 30%;
     left: 34%;
 
 
     margin-left: auto;
     margin-right: auto;
-    
+
 }
 
 .btn {

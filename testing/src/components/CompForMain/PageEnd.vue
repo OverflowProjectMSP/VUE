@@ -21,81 +21,95 @@ export default {
 </template>
 
 <style>
-    @import url('https://fonts.cdnfonts.com/css/rubik');
-    html, body {
-        font-family: 'rubik';
-    }
-    #app {
-        font-family: 'rubik';
-    }
-    body {
-        margin: 5px;
-    }
-    a {
-        text-decoration: none;
-    }
-    .pageend {
-        height: 300px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 20px
-    }
-    .join-us-title {
-        text-align: center;
-        font-weight: 400;
-        font-size: 42px;
-        margin: 0;
-        margin-bottom: 10px;
-        
-    }
-    .join-us-desc {
-        font-size: 22px;
-        margin: 0;
-        margin-bottom: 60px;
-    }
-    .join-us-items {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap: 40px;
-    }
-    .join-us-item button {
-        border: 1px solid #dae9fb;
-        width: 250px;
-        height: 50px;
-        border-radius: 50px;
-        border: none;
-        background-color: #BFDBFE;
-        cursor: pointer;
-        font-size: 16px;
-        transition: all 200ms;
-    }
-    .join-us-item button:hover {
-        transform: scale(1.1);
-        box-shadow: 0px 0px 20px #aac3e1;
-        background-color: #aac3e1
-    }
+@import url('https://fonts.cdnfonts.com/css/rubik');
 
-    @media (max-width: 799px) {
-        .pageend {
-            margin-top: 160px;
-        }
+html,
+body {
+    font-family: 'rubik';
+}
+
+#app {
+    font-family: 'rubik';
+}
+
+body {
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.pageend {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.join-us-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 42px;
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+
+.join-us-desc {
+    font-size: 22px;
+    margin: 0;
+    margin-bottom: 60px;
+}
+
+.join-us-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.join-us-item button {
+    border: 1px solid #dae9fb;
+    width: 250px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-color: #BFDBFE;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 200ms;
+}
+
+.join-us-item button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 20px #aac3e1;
+    background-color: #aac3e1
+}
+
+@media (max-width: 799px) {
+    .pageend {
+        margin-top: 160px;
     }
-    @media (max-width: 589px) {
-        .pageend {
-            margin-top: 230px;
-        }
+}
+
+@media (max-width: 589px) {
+    .pageend {
+        margin-top: 230px;
     }
-    @media (max-width: 529px) {
-        .pageend {
-            margin-top: 430px;
-        }
+}
+
+@media (max-width: 529px) {
+    .pageend {
+        margin-top: 430px;
     }
-    @media (max-width: 388px) {
-        .pageend {
-            margin-top: 600px;
-        }
+}
+
+@media (max-width: 388px) {
+    .pageend {
+        margin-top: 600px;
     }
+}
 </style>
