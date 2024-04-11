@@ -42,7 +42,6 @@ export default {
                     this.message = ``;
                 this.valid = `Отправленно!`
                 }, 1500);
-                console.log(this.userBase);
                 setTimeout(() => {
                 this.valid = ``
                 }, 4500)
