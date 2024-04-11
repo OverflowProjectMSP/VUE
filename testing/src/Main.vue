@@ -16,11 +16,9 @@ export default {
 </script>
 
 <template>
-<header-comp/>
-<router-view/>
+  <header-comp />
+  <router-view />
 
 </template>
 
-<style scoped>
-  
-</style>
+<style scoped></style>

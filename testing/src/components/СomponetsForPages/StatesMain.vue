@@ -6,7 +6,7 @@ import Search from './SearchComp.vue'
 
 
 export default {
-  components: { Search },
+    components: { Search },
 
 
     data() {
@@ -19,9 +19,7 @@ export default {
 }
 </script>
 <template>
-<search/>
+    <search />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

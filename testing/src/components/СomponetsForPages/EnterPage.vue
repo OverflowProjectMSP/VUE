@@ -35,7 +35,7 @@ export default {
                 this.eyeImg = '/src/assets/eye.svg'
             }
         },
-        
+
     }
 }
 
@@ -45,9 +45,10 @@ export default {
     <div class="container">
         <h1>Вход</h1>
         <form action="#!">
-            <input class="form-item" v-model="email" placeholder="Email" type="email"  name="" id="">
+            <input class="form-item" v-model="email" placeholder="Email" type="email" name="" id="">
             <div class="password">
-                <input class="form-item" v-model="password" :type="showPassword" placeholder="Пароль" type="password" name="" id="">
+                <input class="form-item" v-model="password" :type="showPassword" placeholder="Пароль" type="password"
+                    name="" id="">
                 <img @click="toggleVisibility" class="password-show" :src="eyeImg" alt="">
             </div>
         </form>
@@ -164,5 +165,4 @@ div a {
     width: 30px;
 
 }
-
 </style>
