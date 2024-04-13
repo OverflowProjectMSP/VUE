@@ -34,11 +34,6 @@ export default {
                     imageProfileDS: `kenma.gif`
                 },
                 {
-                    name: `cudavlad`,
-                    role: `Фронтенд разработчик`,
-                    imageProfileDS: `curvavlad.png`
-                },
-                {
                     name: `garleenn`,
                     role: `Фронтенд разработчик`,
                     imageProfileDS: `garleen.png`

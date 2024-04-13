@@ -1,9 +1,45 @@
 <script>
+import HeadComp from '../MinorComponents/HeadComp.vue';
+import VidUserComp from '../MainComponents/VidUserComp.vue';
 
+export default {
+    components: { HeadComp, VidUserComp },
+    data() {
+        return {
+            quetionsUsers: [
+                {
+                    title: `Как создать переменную?`,
+                    subscribers: 50,
+                    hours: 43,
+                    views: 43,
+                    answers: 423,
+                    language: 'Python',
+                    complexity: 'Средне',
+
+                },
+                {
+                    title: `Как созопоодать переменную?`,
+                    subscribers: 50,
+                    hours: 43,
+                    views: 43,
+                    answers: 423,
+                    language: 'C++',
+                    complexity: 'Средне',
+                },
+                {
+                    title: `Как создать переменную?`,
+                    subscribers: 45,
+                    hours: 0,
+                    views: 43,
+                    answers: 423,
+                    language: 'Асембелер',
+                    complexity: 'Ебать тяжело',
+                },
+            ],
+        }
+    }
+}
 </script>
-
-
-
 
 <template>
     <div class="profile">
@@ -39,11 +75,14 @@
 
     <div class="container d-flex">
         <div class="item ">
-
             <img src="" alt="">
         </div>
-
-
+        
+        
+    </div>
+    <div class="container d-flex align-items-center flex-column">
+        <HeadComp class="mb-3"/>
+        <VidUserComp v-for="quetion in quetionsUsers" :quetion="quetion"/>
     </div>
 </template>
 <style scoped>
