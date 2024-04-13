@@ -7,7 +7,7 @@ import Search from './SearchComp.vue'
 
 export default {
     components: { Search },
-
+ 
 
     data() {
         return {
