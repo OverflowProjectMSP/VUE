@@ -43,7 +43,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 :root {
     --size-20: 20px;
     --size-26: 26px;

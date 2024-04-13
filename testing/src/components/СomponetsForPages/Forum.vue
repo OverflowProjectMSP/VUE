@@ -35,7 +35,7 @@ export default {
                 <img class="forum-image" :src="'src/assets/js.jpg'" alt="">
                 <p>JavaScript</p>
             </div>
-            <button class="create-post"><img class="plus-icon" :src="plusImg" alt="">Создать пост</button>
+            <button class="create-post"><img class="plus-icon" :src="plusImg" alt=""><a href="#/Quetion">Создать вопрос</a></button>
         </div>
     </div>
     <div class="contant-post">
@@ -78,6 +78,12 @@ export default {
 </template>
 
 <style scoped>
+a {
+    text-decoration: none !important;
+    color: #fff;
+    transition: all 300ms;
+}
+
 .contant-head {
     margin-left: 30px;
     margin-right: 30px;

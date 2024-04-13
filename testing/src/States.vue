@@ -83,7 +83,9 @@ export default {
 
 <!-- Див с виджетами -->
 <div class="con mt-3">
-<vid-comp :item="item"  v-for="item in items" role="button"/>
+<a href="#/CommentsPost">
+    <vid-comp :item="item"  v-for="item in items" role="button" />
+</a>
 </div>
 
 
@@ -93,6 +95,10 @@ export default {
 </template>
 
 <style scoped>
+a {
+    text-decoration: none;
+    color: #000;
+}
 h4{
     margin-left: 20.5%;
     margin-top: 20px;
