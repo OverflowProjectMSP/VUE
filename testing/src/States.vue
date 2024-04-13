@@ -20,7 +20,7 @@ export default {
 
                 },
                 {
-                    title: `Как созопоодать переменную?`,
+                    title: `Как создать переменную?`,
                     subscribers: 50,
                     hours: 43,
                     views: 43,
@@ -73,7 +73,7 @@ export default {
       </div>
       <!-- плюсик -->
       <div class="contain" @click="OpenModal" >
-        <button class="plus"><p class="p">+</p></button>
+        <img src="./assets/add.png" class="add" alt="">
       </div>
       </div>
   </div>
@@ -102,6 +102,11 @@ h4{
 .image{
     margin-right: 10px;
     width: 25px;
+}
+.add{
+    width: 25px;
+    height: 25px;
+    cursor: pointer
 }
 .btn{
     font-size: 16px;
