@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .btn-secondary {
   color: black;
   background-color: white;

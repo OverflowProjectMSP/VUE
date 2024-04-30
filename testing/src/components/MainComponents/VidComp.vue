@@ -8,7 +8,7 @@ for (let i = 0; i < elList.length; i++) {
 export default {
     data() {
         return {
-
+            
         }
 
     },

@@ -20,7 +20,7 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped>
 @import url('https://fonts.cdnfonts.com/css/rubik');
 
 body {
